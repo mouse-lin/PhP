@@ -5,7 +5,8 @@ class Basic < Thor
     load_environment
     delete_datas([Account])
     Account.create!([
-      { :name => "mouse" }
+      { :name => "mouse" },
+      { :name => "cat" }
     ])
     puts "----------- 创建基础数据成功! ------------"
   rescue ActiveRecord::RecordInvalid => error
