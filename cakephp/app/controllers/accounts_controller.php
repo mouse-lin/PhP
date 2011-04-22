@@ -2,6 +2,9 @@
 class AccountsController extends AppController {
     var $name = 'Accounts';
 
+    #Mouse
+    #显示测试的初始化页面
+    #----------------------------------------------
     function index() {
         $this->set('accounts', $this->Account->find('all'));
     }
