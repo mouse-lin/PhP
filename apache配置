@@ -1,0 +1,101 @@
+在ubuntu 中配置AMP(A:apache，M:mysql，P:php)
+以下步骤是从网上整合而来，已经在本人电脑上尝试过，如安装过程有问题，报歉，请自己上网找答案[懿彬注]
+
+1>安装d
+	apt-get install apache2 mysql-server mysql-client php5 php5-gd php5-mysql
+2>修改/var/www权限
+	sudo chmod 777 /var/www   (对777表示的文件权限不是很清楚可参考chmod命令)
+3>安装phpmyadmin-Mysql 数据库管理
+	sudo apt-get install phpmyadmin
+	安装phpmyadmin过程的设置
+	A、选择Web server：apache2
+	B、设置的Mysql数据库密码连接密码
+4>将phpmyadmin与apache2建立连接
+	若www目录在/var/www, phpmyadmin在/usr/share /phpmyadmin目录
+	连接命令为:sudo ln -s /usr/share/phpmyadmin /var/www
+5>测试phpmyadmin 
+	在浏览器地址栏中打开http://localhost/phpmyadmin
+
+ubuntu 配置apache
+1>启动mod_rewrite模块
+	sudo a2enmod rewrite
+2>重启apache服务器
+	sudo /etc/init.d/apache2 restart
+3>设置apache支持htm, html, php
+	sudo gedit /etc/apache2/apache2.conf 或 sudo gedit /etc/apache2/mods-enabled/php5.conf
+	在打开的文件中加入AddType application/x-httpd-php .php .htm .html
+
+#----------------------------------------------
+1.安装好apache后，打开终端,执行 cd /etc/apache2/sites-available
+2.在里面建一个文件，名字随便起,例如 cakephp,里面内容:
+Listen 3600
+NameVirtualHost 0.0.0.0:3600
+<VirtualHost 0.0.0.0:3600>
+DocumentRoot /home/mouse/php/cakephp/app/webroot
+ServerName loaclhost
+<Directory /home/mouse/php/cakephp/app/webrootc>
+     AllowOverride all
+     Options Indexes MultiViews
+     Order allow,deny
+     Allow from all
+</Directory>
+</VirtualHost>
+#----------------------------------------------
+上面文件，意思是监听端口为 3010端口，端口都是可以修改的，就好像我们做ruby on rails 时候，在浏览器打入
+localhost:3010 就可以访问我们的网站
+DocumentRoot和Directory 是你项目的路径，如果你直接放在你用户目录下，主要修改/home/mouse 为你的用户就可以 /home/houzi
+其他参数暂时可以不需要明白
+
+激活cakephp文件名
+打开终端，
+执行 sudo a2ensite cakephp,然后重启apache就可以了
+(apache 重启、关闭、启动命令在下面)
+
+#----------------------------------------------
+下面是apache 的一些使用命令，在终端根据需要运行就可以
+
+Task: Start Apache 2 Server /启动apache服务
+# /etc/init.d/apache2 start
+or
+$ sudo /etc/init.d/apache2 start
+
+Task: Restart Apache 2 Server /重启apache服务
+# /etc/init.d/apache2 restart
+or
+$ sudo /etc/init.d/apache2 restart
+
+Task: Stop Apache 2 Server /停止apache服务
+# /etc/init.d/apache2 stop
+or
+$ sudo /etc/init.d/apache2 stop
+
+#----------------------------------------------
+全部搞定后在浏览器打入
+localhost:3600
+就可以看到我们的主页了(目前主页应该没有什么东西，可能会有些错误信息而已,因为你还没有建数据库)
+
+#----------------------------------------------
+数据库创建
+1.到cakephp/app/config/database.php 修改数据库配置(与ror配置差不多)
+class DATABASE_CONFIG {
+
+	public $default = array(
+		'driver' => 'mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		'login' => 'root',
+		'password' => '000',    #主要把这里修改为你们mysql数据库的密码就可以了
+		'database' => 'php',
+		'prefix' => '',
+    'encoding'  => 'utf8', 
+	);
+打开终端 执行 mysql -u root -p你的mysql密码     (进入mysql)
+执行 create database php;(创建php 数据库)
+#----------------------------------------------
+数据库导入
+在cakephp/sql php.sql文件是我这边导出数据库的文件
+打开终端，进入到这个目录，执行 mysql -u root -p php < php.sql,导入数据与数据库结构
+
+再次
+localhost:3600
+就可以看到我们的主页了
