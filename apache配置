@@ -32,7 +32,7 @@ Listen 3600
 NameVirtualHost 0.0.0.0:3600
 <VirtualHost 0.0.0.0:3600>
 DocumentRoot /home/mouse/php/cakephp/app/webroot
-ServerName loaclhost
+ServerName localhost
 <Directory /home/mouse/php/cakephp/app/webrootc>
      AllowOverride all
      Options Indexes MultiViews
