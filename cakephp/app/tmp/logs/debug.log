@@ -1,0 +1,78 @@
+2011-04-22 23:04:09 Notice: Notice (8): Undefined variable: pageTitle in [/home/mouse/php/cakephp/app/views/layouts/default.ctp, line 5]
+Trace:
+include - APP/views/layouts/default.ctp, line 5
+View::_render() - CORE/cake/libs/view/view.php, line 647
+View::renderLayout() - CORE/cake/libs/view/view.php, line 438
+View::render() - CORE/cake/libs/view/view.php, line 401
+Controller::render() - CORE/cake/libs/controller/controller.php, line 848
+ExceptionRenderer::_outputMessage() - CORE/cake/libs/error/exception_renderer.php, line 228
+ExceptionRenderer::error500() - CORE/cake/libs/error/exception_renderer.php, line 219
+ExceptionRenderer::render() - CORE/cake/libs/error/exception_renderer.php, line 161
+ErrorHandler::handleException() - CORE/cake/libs/error/error_handler.php, line 122
+[main] - [internal], line ??
+
+2011-04-22 23:04:10 Notice: Notice (8): Undefined variable: pageTitle in [/home/mouse/php/cakephp/app/views/layouts/default.ctp, line 5]
+Trace:
+include - APP/views/layouts/default.ctp, line 5
+View::_render() - CORE/cake/libs/view/view.php, line 647
+View::renderLayout() - CORE/cake/libs/view/view.php, line 438
+View::render() - CORE/cake/libs/view/view.php, line 401
+Controller::render() - CORE/cake/libs/controller/controller.php, line 848
+ExceptionRenderer::_outputMessage() - CORE/cake/libs/error/exception_renderer.php, line 228
+ExceptionRenderer::error500() - CORE/cake/libs/error/exception_renderer.php, line 219
+ExceptionRenderer::render() - CORE/cake/libs/error/exception_renderer.php, line 161
+ErrorHandler::handleException() - CORE/cake/libs/error/error_handler.php, line 122
+[main] - [internal], line ??
+
+2011-04-22 23:04:11 Notice: Notice (8): Undefined variable: pageTitle in [/home/mouse/php/cakephp/app/views/layouts/default.ctp, line 5]
+Trace:
+include - APP/views/layouts/default.ctp, line 5
+View::_render() - CORE/cake/libs/view/view.php, line 647
+View::renderLayout() - CORE/cake/libs/view/view.php, line 438
+View::render() - CORE/cake/libs/view/view.php, line 401
+Controller::render() - CORE/cake/libs/controller/controller.php, line 848
+ExceptionRenderer::_outputMessage() - CORE/cake/libs/error/exception_renderer.php, line 228
+ExceptionRenderer::error500() - CORE/cake/libs/error/exception_renderer.php, line 219
+ExceptionRenderer::render() - CORE/cake/libs/error/exception_renderer.php, line 161
+ErrorHandler::handleException() - CORE/cake/libs/error/error_handler.php, line 122
+[main] - [internal], line ??
+
+2011-04-22 23:04:12 Notice: Notice (8): Undefined variable: pageTitle in [/home/mouse/php/cakephp/app/views/layouts/default.ctp, line 5]
+Trace:
+include - APP/views/layouts/default.ctp, line 5
+View::_render() - CORE/cake/libs/view/view.php, line 647
+View::renderLayout() - CORE/cake/libs/view/view.php, line 438
+View::render() - CORE/cake/libs/view/view.php, line 401
+Controller::render() - CORE/cake/libs/controller/controller.php, line 848
+ExceptionRenderer::_outputMessage() - CORE/cake/libs/error/exception_renderer.php, line 228
+ExceptionRenderer::error500() - CORE/cake/libs/error/exception_renderer.php, line 219
+ExceptionRenderer::render() - CORE/cake/libs/error/exception_renderer.php, line 161
+ErrorHandler::handleException() - CORE/cake/libs/error/error_handler.php, line 122
+[main] - [internal], line ??
+
+2011-04-22 23:04:12 Notice: Notice (8): Undefined variable: pageTitle in [/home/mouse/php/cakephp/app/views/layouts/default.ctp, line 5]
+Trace:
+include - APP/views/layouts/default.ctp, line 5
+View::_render() - CORE/cake/libs/view/view.php, line 647
+View::renderLayout() - CORE/cake/libs/view/view.php, line 438
+View::render() - CORE/cake/libs/view/view.php, line 401
+Controller::render() - CORE/cake/libs/controller/controller.php, line 848
+ExceptionRenderer::_outputMessage() - CORE/cake/libs/error/exception_renderer.php, line 228
+ExceptionRenderer::error500() - CORE/cake/libs/error/exception_renderer.php, line 219
+ExceptionRenderer::render() - CORE/cake/libs/error/exception_renderer.php, line 161
+ErrorHandler::handleException() - CORE/cake/libs/error/error_handler.php, line 122
+[main] - [internal], line ??
+
+2011-04-22 23:04:13 Notice: Notice (8): Undefined variable: pageTitle in [/home/mouse/php/cakephp/app/views/layouts/default.ctp, line 5]
+Trace:
+include - APP/views/layouts/default.ctp, line 5
+View::_render() - CORE/cake/libs/view/view.php, line 647
+View::renderLayout() - CORE/cake/libs/view/view.php, line 438
+View::render() - CORE/cake/libs/view/view.php, line 401
+Controller::render() - CORE/cake/libs/controller/controller.php, line 848
+ExceptionRenderer::_outputMessage() - CORE/cake/libs/error/exception_renderer.php, line 228
+ExceptionRenderer::error500() - CORE/cake/libs/error/exception_renderer.php, line 219
+ExceptionRenderer::render() - CORE/cake/libs/error/exception_renderer.php, line 161
+ErrorHandler::handleException() - CORE/cake/libs/error/error_handler.php, line 122
+[main] - [internal], line ??
+
