@@ -99,3 +99,6 @@ class DATABASE_CONFIG {
 再次
 localhost:3600
 就可以看到我们的主页了
+
+如果出现tmp/cache是只读文件
+打开终端， 进入cakephp，执行 chmod -R 777 app/tmp

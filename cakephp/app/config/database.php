@@ -65,7 +65,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => '000',
+		'password' => '123',
 		'database' => 'php',
 		'prefix' => '',
     'encoding'  => 'utf8', 
