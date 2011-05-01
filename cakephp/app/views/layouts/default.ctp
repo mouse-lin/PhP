@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style_94.css">
     <link rel="stylesheet" type="text/css" href="./css/menu_style.css">
     <script type="text/javascript" src="./js/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="./js/clock.js"></script>
   </head>
 
   <?php echo $scripts_for_layout ?>
@@ -49,8 +50,17 @@
     <div id="header">
       <div class="headerwarp">
         <div class="logo">
-          <a target="_blank" href="" title="HzuPlay">HzuPlay</a>
+          <a target="_blank" href="" title="HzuPlay"><b>HzuPlay</b></a>
         </div>
+
+        <! 时间动态显示(js实现) >
+        <span id ='clock' style="float:left; margin-right:6px;"> 
+          <SCRIPT type=text/javascript>
+              var clock = new Clock();
+              clock.display(document.getElementById("clock"));
+            </SCRIPT>
+        </span>
+
         <div class="nav_account">
           <div class="gd_sns_right  gd">
             <a href="" class="notabs">注册</a>
@@ -100,12 +110,6 @@
       </div>
       <div class="bd">
         <div id="footlinks">
-          <p>
-            当前时区 GMT+8, 现在时间是 2011-4-27 17:08
-            <a href="" target="_blank">
-              <br>
-            </a>
-          </p>
           <p>
             <span class="scrolltop" onclick="window.scrollTo(0,0);">
               TOP
