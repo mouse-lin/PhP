@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>
-      <?php echo HzuPlay电子竞技交流平台 ?>
+      <?php echo "HzuPlay电子竞技交流平台" ?>
     </title>
     <link rel="stylesheet" type="text/css" href="./css/style_94.css">
     <link rel="stylesheet" type="text/css" href="./css/menu_style.css">
@@ -36,38 +36,33 @@
         });
       });
     </script>
+    <ul id="navigation">
+      <li class="home"><a href="" title="Home"></a></li>
+      <li class="about"><a href="" title="About"></a></li>
+      <li class="search"><a href="" title="Search"></a></li>
+      <li class="photos"><a href="" title="Photos"></a></li>
+      <li class="rssfeed"><a href="" title="Rss Feed"></a></li>
+      <li class="podcasts"><a href="" title="Podcasts"></a></li>
+      <li class="contact"><a href="" title="Contact"></a></li>
+    </ul>
+   <div id="gdlogo"><div class="logo"></div></div>
     <div id="header">
-        <ul id="navigation">
-          <li class="home">
-            <a href="" title="Home">
-            </a>
-          </li>
-          <li class="about">
-            <a href="" title="About">
-            </a>
-          </li>
-          <li class="search">
-            <a href="" title="Search">
-            </a>
-          </li>
-          <li class="photos">
-            <a href="" title="Photos">
-            </a>
-          </li>
-          <li class="rssfeed">
-            <a href="" title="Rss Feed">
-            </a>
-          </li>
-          <li class="podcasts">
-            <a href="" title="Podcasts">
-            </a>
-          </li>
-          <li class="contact">
-            <a href="" title="Contact">
-            </a>
-          </li>
-        </ul>
+      <div class="headerwarp">
+        <div class="logo">
+          <a target="_blank" href="" title="HzuPlay">HzuPlay</a>
+        </div>
+        <div class="nav_account">
+          <div class="gd_sns_right  gd">
+            <a href="" class="notabs">注册</a>
+            |
+            <a href="">登录</a>
+          </div>
+          <a class="login_thumb" href=""><img src="./img/noavatar_middle.jpg"></a>
+        </div>
+      </div>
     </div>
+
+
     <?php echo $content_for_layout ?>
     <div id="footer">
     </div>
