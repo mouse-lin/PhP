@@ -21,7 +21,7 @@
         $('#navigation a').stop().animate({
           'marginLeft': '-85px'
         },
-        1000);
+        3500);
 
         $('#navigation > li').hover(function() {
           $('a', $(this)).stop().animate({
@@ -38,13 +38,13 @@
       });
     </script>
     <ul id="navigation">
-      <li class="home"><a href="" title="Home"></a></li>
-      <li class="about"><a href="" title="About"></a></li>
-      <li class="search"><a href="" title="Search"></a></li>
-      <li class="photos"><a href="" title="Photos"></a></li>
-      <li class="rssfeed"><a href="" title="Rss Feed"></a></li>
-      <li class="podcasts"><a href="" title="Podcasts"></a></li>
-      <li class="contact"><a href="" title="Contact"></a></li>
+      <li class="home"><a href="" title="主页"></a></li>
+      <li class="hot_games"><a href="" title="热门游戏"></a></li>
+      <li class="expert_games"><a href="" title="期待游戏"></a></li>
+      <li class="other_games"><a href="" title="其他游戏"></a></li>
+      <li class="contact"><a href="" title="联系我们"></a></li>
+      <li class="setting"><a href="" title="设置"></a></li>
+      <li class="admin"><a href="" title="管理"></a></li>
     </ul>
    <div id="gdlogo"><div class="logo"></div></div>
     <div id="header">

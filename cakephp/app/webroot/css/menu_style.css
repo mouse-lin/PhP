@@ -32,23 +32,23 @@ ul#navigation li a {
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
 }
 ul#navigation .home a{
-    background-image: url(../images/home.png);
+    background-image: url(../img/menu/home1.png);
 }
-ul#navigation .about a      {
-    background-image: url(../images/id_card.png);
+ul#navigation .expert_games a      {
+    background-image: url(../img/menu/expert_games1.png);
 }
-ul#navigation .search a      {
-    background-image: url(../images/search.png);
+ul#navigation .hot_games a      {
+    background-image: url(../img/menu/hot_games1.png);
 }
-ul#navigation .podcasts a      {
-    background-image: url(../images/ipod.png);
+ul#navigation .other_games a      {
+    background-image: url(../img/menu/other_games1.png);
 }
-ul#navigation .rssfeed a   {
-    background-image: url(../images/rss.png);
+ul#navigation .contact a   {
+    background-image: url(../img/menu/contact1.png);
 }
-ul#navigation .photos a     {
-    background-image: url(../images/camera.png);
+ul#navigation .setting a     {
+    background-image: url(../img/menu/setting1.png);
 }
-ul#navigation .contact a    {
-    background-image: url(../images/mail.png);
+ul#navigation .admin a    {
+    background-image: url(../img/menu/admin1.png);
 }
