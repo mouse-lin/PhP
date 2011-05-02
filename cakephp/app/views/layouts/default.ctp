@@ -43,7 +43,7 @@
       <li class="expert_games"><a href="" title="期待游戏"></a></li>
       <li class="other_games"><a href="" title="其他游戏"></a></li>
       <li class="contact"><a href="" title="联系我们"></a></li>
-      <li class="setting"><a href="" title="设置"></a></li>
+      <li class="setting"><a href="" title="个人设置"></a></li>
       <li class="admin"><a href="" title="管理"></a></li>
     </ul>
    <div id="gdlogo"><div class="logo"></div></div>
