@@ -14,8 +14,8 @@
 				</thead><tbody id="forum822">
 						<tr>
 							<th>
-								<a href="forum-822-1.html"><img border="0" align="left" alt="" src="http://pic.duowan.com/sz/0909/116439968586/116439982182.jpg" style="margin-right: 10px"></a>								<h2><a href="forum-822-1.html">水煮江山</a></h2>
-								<p><span style="font-weight:bold;color:#ff0000;">水煮江山官网：</span><br><a target="_blank" href="http://sz.duowan.com/">http://sz.duowan.com/</a></p>																							</th>
+								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/水煮江山.jpg" style="margin-right: 10px"></a>								<h2><a href="#">水煮江山</a></h2>
+								<p><span style="font-weight:bold;color:#ff0000;">水煮江山官网：</span><br><a target="_blank" href="http://sz.duowan.com/">点击进入</a></p>																							</th>
 							<td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -27,8 +27,8 @@
 				<tbody id="forum751">
 						<tr>
 							<th>
-								<a href="forum-751-1.html"><img border="0" align="left" alt="" src="http://pic.duowan.com/yaoguo/0909/117561462131/117561566699.jpg" style="margin-right: 10px"></a>								<h2><a href="forum-751-1.html">弹弹堂</a></h2>
-								<p><span style="font-weight:bold;color:#ff0000;">弹弹堂官网：</span><br><a target="_blank" href="http://ddt.duowan.com">http://ddt.duowan.com</a></p>																							</th>
+								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/三国杀.jpg" style="margin-right: 10px"></a>								<h2><a href="#">三国杀</a></h2>
+								<p><span style="font-weight:bold;color:#ff0000;">三国杀官网：</span><br><a target="_blank" href="http://web.sanguosha.com/">点击进入</a></p>																							</th>
 							<td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -40,8 +40,8 @@
 				<tbody id="forum810">
 						<tr>
 							<th>
-								<a href="forum-810-1.html"><img border="0" align="left" alt="" src="http://pic.duowan.com/yaoguo/0909/117562268393/117562283693.jpg" style="margin-right: 10px"></a>								<h2><a href="forum-810-1.html">武林英雄</a></h2>
-								<p><span style="font-weight:bold;color:#ff0000;">武林英雄官网：</span><br><a target="_blank" href="http://yx.duowan.com">http://yx.duowan.com</a></p>																							</th>
+								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/极光世界.jpg" style="margin-right: 10px"></a>								<h2><a href="#">极光世界</a></h2>
+								<p><span style="font-weight:bold;color:#ff0000;">极光世界官网：</span><br><a target="_blank" href="http://bbs.aiaigame.com/">点击进入</a></p>																							</th>
 					<td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -50,4 +50,47 @@
 																						</td>
 						</tr>
 					</tbody>
+				<tbody id="forum1210">
+						<tr>
+							<th>
+								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/口袋西游.jpg" style="margin-right: 10px"></a>								<h2><a href="#">口袋西游</a></h2>
+								<p><span style="font-weight:bold;color:#ff0000;">口袋西游：</span><br><a target="_blank" href="http://bbs.kdxy.wanmei.com/">点击进入</a></p>																							</th>
+					<td class="nums">0</td>
+							<td class="nums">0</td>
+							<td class="lastpost">
+																								<a href=""></a>
+									<cite> <a href=""></a> </cite>
+																						</td>
+						</tr>
+					</tbody>
+
+
+				<tbody id="forum80">
+						<tr>
+							<th>
+								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/突击风暴.jpg" style="margin-right: 10px"></a>								<h2><a href="#">突击风暴</a></h2>
+								<p><span style="font-weight:bold;color:#ff0000;">突击风暴官网：</span><br><a target="_blank" href="http://sa.sdo.com/web2/home/into.html">点击进入</a></p>																							</th>
+					<td class="nums">0</td>
+							<td class="nums">0</td>
+							<td class="lastpost">
+																								<a href=""></a>
+									<cite> <a href=""></a> </cite>
+																						</td>
+						</tr>
+					</tbody>
+				<tbody id="forum80">
+						<tr>
+							<th>
+								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/真三国无双.jpg" style="margin-right: 10px"></a>								<h2><a href="#">真三国无双</h2>
+								<p><span style="font-weight:bold;color:#ff0000;">真三国无双官网：</span><br><a target="_blank" href="http://www.wushuangol.com/">点击进入</a></p>																							</th>
+					<td class="nums">0</td>
+							<td class="nums">0</td>
+							<td class="lastpost">
+																								<a href=""></a>
+									<cite> <a href=""></a> </cite>
+																						</td>
+						</tr>
+					</tbody>
+
 							</table></div>
+								<p><span style="font-weight:bold;color:#ff0000;">突击风暴官网：</span><br><a target="_blank" href="http://sa.sdo.com/web2/home/into.html">点击进入</a></p>																							</th>
