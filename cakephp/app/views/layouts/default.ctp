@@ -43,7 +43,7 @@
     </script>
     <ul id="navigation">
       <li class="home"><a href="" title="主页"></a></li>
-      <li class="hot_games"><a href="" title="热门游戏"></a></li>
+      <li class="hot_games"><a href="games/hot_game" title="热门游戏"></a></li>
       <li class="expert_games"><a href="" title="期待游戏"></a></li>
       <li class="other_games"><a href="" title="其他游戏"></a></li>
       <li class="contact"><a href="" title="联系我们"></a></li>
