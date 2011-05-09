@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110422152544) do
+ActiveRecord::Schema.define(:version => 20110509024929) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -21,6 +21,25 @@ ActiveRecord::Schema.define(:version => 20110422152544) do
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "games", :force => true do |t|
+    t.string   "image_url"
+    t.string   "name"
+    t.string   "introduce"
+    t.string   "game_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "login"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.string   "user_name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

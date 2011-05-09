@@ -7,13 +7,13 @@
     <title>
       <?php echo "HzuPlay电子竞技交流平台" ?>
     </title>
-    <link rel="stylesheet" type="text/css" href="./css/style_94.css">
-    <link rel="stylesheet" type="text/css" href="./css/menu_style.css">
-    <script type="text/javascript" src="./js/jquery-1.3.2.js"></script>
-    <script type="text/javascript" src="./js/clock.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/style_94.css">
+    <link rel="stylesheet" type="text/css" href="../../css/menu_style.css">
+    <script type="text/javascript" src="../../js/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="../../js/login.js"></script>
+    <script type="text/javascript" src="../../js/clock.js"></script>
   </head>
 
-  <?php echo $scripts_for_layout ?>
   <body>
   <! 导航 >
     <script type="text/javascript">
@@ -36,6 +36,10 @@
           200);
         });
       });
+
+      function loginHandler() { 
+          UserVoice.PopIn.show('600px', '300px', "/users/login");
+      }
     </script>
     <ul id="navigation">
       <li class="home"><a href="" title="主页"></a></li>
@@ -65,9 +69,9 @@
           <div class="gd_sns_right  gd">
             <a href="" class="notabs">注册</a>
             |
-            <a href="">登录</a>
+            <a href="#" onclick="loginHandler();">登录</a>
           </div>
-          <a class="login_thumb" href=""><img src="./img/noavatar_middle.jpg"></a>
+          <a class="login_thumb" href="#"><img src="../../img/noavatar_middle.jpg"></a>
         </div>
       </div>
     </div>

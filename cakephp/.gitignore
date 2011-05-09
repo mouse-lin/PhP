@@ -2,3 +2,4 @@
 *.swp
 /app/config/database.php
 /php_db/config/database.yml
+/app/config/database.php

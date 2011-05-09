@@ -2,11 +2,11 @@
 class AccountsController extends AppController {
 
 	public $name = 'Accounts';
-  var $uses = array('Account','Article');
+  var $uses = array('Account');
 
 	public function index() {
 		$this->Account->recursive = 0;
-    $this->set('pageTitle',"nihao");
+    #$this->set('pageTitle',"1");
 		$this->set('accounts', $this->paginate("Account"));
 	}
 
