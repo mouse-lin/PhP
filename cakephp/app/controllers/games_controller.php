@@ -7,8 +7,9 @@ class GamesController extends AppController {
   function  hot_game(){ 
 
   }
-  function expert_game(){ }
 
+
+  function expert_game(){  }
   function other_game(){  }
 }
 
