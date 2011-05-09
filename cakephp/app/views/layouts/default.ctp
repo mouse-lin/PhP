@@ -21,7 +21,7 @@
         $('#navigation a').stop().animate({
           'marginLeft': '-85px'
         },
-        3500);
+        1000);
 
         $('#navigation > li').hover(function() {
           $('a', $(this)).stop().animate({
@@ -39,6 +39,10 @@
 
       function loginHandler() { 
           UserVoice.PopIn.show('600px', '300px', "/users/login");
+      };
+
+      function signupHandler() { 
+          UserVoice.PopIn.show('600px', '300px', "/users/signup");
       }
     </script>
     <ul id="navigation">
@@ -67,7 +71,7 @@
 
         <div class="nav_account">
           <div class="gd_sns_right  gd">
-            <a href="" class="notabs">注册</a>
+            <a href="#" onclick="signupHandler();" class="notabs">注册</a>
             |
             <a href="#" onclick="loginHandler();">登录</a>
           </div>
