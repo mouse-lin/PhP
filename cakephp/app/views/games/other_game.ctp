@@ -1,4 +1,8 @@
-<div class="bd">
+<div class="mainbox forumlist">
+			<div class="hd">
+					<h3><a href="index.php?gid=294">其他专区</a></h3>
+			</div>
+			<div class="bd">
 			<table cellspacing="0" cellpadding="0" style="" summary="category294" id="category_294">
 							<thead class="category">
 					<tr>

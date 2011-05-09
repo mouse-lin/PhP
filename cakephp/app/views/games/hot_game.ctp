@@ -1,3 +1,8 @@
+<div class="mainbox forumlist">
+			<div class="hd">
+					<h3><a href="index.php?gid=59">热门游戏专区</a></h3>
+			</div>
+			<div class="bd">
 <table cellspacing="0" cellpadding="0" style="" summary="category59" id="category_59">
 							<thead class="category">
 					<tr>
