@@ -42,10 +42,10 @@
       }
     </script>
     <ul id="navigation">
-      <li class="home"><a href="" title="主页"></a></li>
-      <li class="hot_games"><a href="games/hot_game" title="热门游戏"></a></li>
-      <li class="expert_games"><a href="games/expert_game" title="期待游戏"></a></li>
-      <li class="other_games"><a href="games/other_game" title="其他游戏"></a></li>
+      <li class="home"><a href="../homes" title="主页"></a></li>
+      <li class="hot_games"><a href="../games/hot_game" title="热门游戏"></a></li>
+      <li class="expert_games"><a href="../games/expert_game" title="期待游戏"></a></li>
+      <li class="other_games"><a href="../games/other_game" title="其他游戏"></a></li>
       <li class="contact"><a href="" title="联系我们"></a></li>
       <li class="setting"><a href="" title="个人设置"></a></li>
       <li class="admin"><a href="" title="管理"></a></li>
