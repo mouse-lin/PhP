@@ -15,7 +15,7 @@
 						<tr>
 							<th>
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/水煮江山.jpg" style="margin-right: 10px"></a>								<h2><a href="#">水煮江山</a></h2>
-								<p><span style="font-weight:bold;color:#ff0000;">水煮江山官网：</span><br><a target="_blank" href="http://sz.duowan.com/">点击进入</a></p>																							</th>
+								<p><span style="font-weight:bold;color:#ff0000;">水煮江山官网：</span><a target="_blank" href="http://sz.duowan.com/"><font color="blue">点击进入</font></a></p>																							</th>
 							<td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -28,7 +28,7 @@
 						<tr>
 							<th>
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/三国杀.jpg" style="margin-right: 10px"></a>								<h2><a href="#">三国杀</a></h2>
-								<p><span style="font-weight:bold;color:#ff0000;">三国杀官网：</span><br><a target="_blank" href="http://web.sanguosha.com/">点击进入</a></p>																							</th>
+								<p><span style="font-weight:bold;color:#ff0000;">三国杀官网：</span><a target="_blank" href="http://web.sanguosha.com/"><font color="blue">点击进入</font></a></p>																							</th>
 							<td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -41,7 +41,7 @@
 						<tr>
 							<th>
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/极光世界.jpg" style="margin-right: 10px"></a>								<h2><a href="#">极光世界</a></h2>
-								<p><span style="font-weight:bold;color:#ff0000;">极光世界官网：</span><br><a target="_blank" href="http://bbs.aiaigame.com/">点击进入</a></p>																							</th>
+								<p><span style="font-weight:bold;color:#ff0000;">极光世界官网：</span><a target="_blank" href="http://bbs.aiaigame.com/"><font color="blue">点击进入</font></a></p>																							</th>
 					<td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -54,7 +54,7 @@
 						<tr>
 							<th>
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/口袋西游.jpg" style="margin-right: 10px"></a>								<h2><a href="#">口袋西游</a></h2>
-								<p><span style="font-weight:bold;color:#ff0000;">口袋西游：</span><br><a target="_blank" href="http://bbs.kdxy.wanmei.com/">点击进入</a></p>																							</th>
+								<p><span style="font-weight:bold;color:#ff0000;">口袋西游：</span><a target="_blank" href="http://bbs.kdxy.wanmei.com/"><font color="blue">点击进入</font></a></p>																							</th>
 					<td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -69,7 +69,7 @@
 						<tr>
 							<th>
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/突击风暴.jpg" style="margin-right: 10px"></a>								<h2><a href="#">突击风暴</a></h2>
-								<p><span style="font-weight:bold;color:#ff0000;">突击风暴官网：</span><br><a target="_blank" href="http://sa.sdo.com/web2/home/into.html">点击进入</a></p>																							</th>
+								<p><span style="font-weight:bold;color:#ff0000;">突击风暴官网：</span><a target="_blank" href="http://sa.sdo.com/web2/home/into.html"><font color="blue">点击进入</font></a></p>																							</th>
 					<td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -82,7 +82,7 @@
 						<tr>
 							<th>
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/other_game/真三国无双.jpg" style="margin-right: 10px"></a>								<h2><a href="#">真三国无双</h2>
-								<p><span style="font-weight:bold;color:#ff0000;">真三国无双官网：</span><br><a target="_blank" href="http://www.wushuangol.com/">点击进入</a></p>																							</th>
+								<p><span style="font-weight:bold;color:#ff0000;">真三国无双官网：</span><a target="_blank" href="http://www.wushuangol.com/"><font color="blue">点击进入</font></a></p>																							</th>
 					<td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -93,4 +93,4 @@
 					</tbody>
 
 							</table></div>
-								<p><span style="font-weight:bold;color:#ff0000;">突击风暴官网：</span><br><a target="_blank" href="http://sa.sdo.com/web2/home/into.html">点击进入</a></p>																							</th>
+								

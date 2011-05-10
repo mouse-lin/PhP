@@ -28,7 +28,7 @@
 						<tr>
 							<th class="new">
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/expert_game/星辰变.jpg" style="margin-right: 10px"></a>								<h2><a href="#">星辰变</a><em> (今日:  0)</em></h2>
-								<p>盛大2D次世代动作网游！|  <a target="_blank" href="http://xcb.duowan.com"><font color="blue">进入专区</font></a> |																					</th>
+								<p>盛大2D次世代动作网游！|  <a target="_blank" href="http://xcb.duowan.com"><font color="blue">进入专区</font></a> 																					</th>
 				      <td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -53,7 +53,7 @@
 						<tr>
 							<th class="new">
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/expert_game/天骄3.jpg" style="margin-right: 10px"></a>								<h2><a href="#">天骄3</a><em> (今日:  0)</em></h2>
-								<p>天骄系列，光宇华夏运营的3D国产玄幻网游~</p>																					</th>
+								<p>天骄系列，光宇华夏运营的3D国产玄幻网游! | <a target="_blank" href="http://dt2.duowan.com"><font color="#0000FF">进入专区</font></a></p>																					</th>
 				      <td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -92,7 +92,7 @@
 						<tr>
 							<th class="new">
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/expert_game/创世西游.jpg" style="margin-right: 10px"></a>								<h2><a href="#">创世西游</a><em> (今日:  0)</em></h2>
-								<p>网易西游三部曲，新章| <a href="http://csxy.duowan.com"><font color="blue">资料站</font></a>[<a href="http://csxy.duowan.com/sp/"><font color="blue">视频站</font></a>]</p>																							</th>
+								<p>网易西游三部曲，新章! | <a href="http://csxy.duowan.com"><font color="blue">进入专区</font></a></p>																							</th>
 				      <td class="nums">0</td>
 							<td class="nums">0</td>
 							<td class="lastpost">
@@ -118,7 +118,7 @@
 											<tr>
 							<th class="new">
 								<a href='#'><img border="0" align="left" alt="" src="../img/games/expert_game/龙之谷.jpg" style="margin-right: 10px"></a>								<h2><a href='#'>龙之谷</a><em> (今日: 0)</em></h2>
-								<p>无锁定操作、3D画面、激烈PVP，酣畅淋漓打击感…| [<a target="_blank" href="http://dn.duowan.com/"><font color="blue">进入专区</font></a>]						</th>
+								<p>无锁定操作、3D画面、激烈PVP，酣畅淋漓打击感…| <a target="_blank" href="http://dn.duowan.com/"><font color="blue">进入专区</font></a>			</th>
 							<td class="nums">0</td>
 							<td class="nums">0</td>
               <td class="lastpost">
@@ -131,7 +131,7 @@
             <tr>
 							<th class="new">
 								<a href='#'><img border="0" align="left" alt="" src="../img/games/expert_game/武林外传.jpg" style="margin-right: 10px"></a>								<h2><a href='#'>武林外传</a><em> (今日: 0)</em></h2>
-								<p>嘿！兄弟，我们好久不见你在哪里  <a target="_blank" href="http://wulin2.duowan.com/"><font color="#0000ff">进入专区</font></a></p>																						</th>
+								<p>嘿！兄弟，我们好久不见你在哪里 | <a target="_blank" href="http://wulin2.duowan.com/"><font color="#0000ff">进入专区</font></a></p>																						</th>
 							<td class="nums">0</td>
 							<td class="nums">0</td>
 						 <td class="lastpost">                                 
@@ -144,7 +144,7 @@
 						<tr>
 							<th class="new">
 								<a href='#'><img border="0" align="left" alt="" src="../img/games/expert_game/鹿鼎记.jpg" style="margin-right: 10px"></a>								<h2><a href='#'>鹿鼎记</a><em> (今日: 0)</em></h2>
-								<p>搜狐畅游超越天龙八部的游戏大作！|  <a target="_blank" href="http://ldj.duowan.com/"><font color="blue">进入资料站</font></a> </p>																					</th>
+								<p>搜狐畅游超越天龙八部的游戏大作！|  <a target="_blank" href="http://ldj.duowan.com/"><font color="blue">进入专区</font></a> </p>																					</th>
 							<td class="nums">0</td>
 							<td class="nums">0</td>
 							 <td class="lastpost">                                 
@@ -157,7 +157,7 @@
 						<tr>
 							<th class="new">
 								<a href="#"><img border="0" align="left" alt="" src="../img/games/expert_game/梦幻诛仙.jpg" style="margin-right: 10px"></a>								<h2><a href='#'>梦幻诛仙</a><em> (今日:  0)</em></h2>
-								<p>历时三年研发，进军2D市场！| <a href="http://mhzx.duowan.com/">[<font color="blue">进入专区</font></a>]																			</th>
+								<p>历时三年研发，进军2D市场！| <a href="http://mhzx.duowan.com/"><font color="blue">进入专区</font></a>																			</th>
 							<td class="nums">0</td>
 							<td class="nums">0</td>
 						 <td class="lastpost">                                 
