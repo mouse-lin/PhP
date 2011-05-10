@@ -834,7 +834,7 @@ td a:hover {
     height: 250px;
     width: 145px;
     margin-left: 380px;
-    background: url(../img/welcome2.png) no-repeat;
+    background: url(../img/welcome.png) no-repeat;
 }
 .welcome_content { 
     font-size: 18px;
@@ -886,5 +886,9 @@ td a:hover {
 }
 
 #denglu{ 
+  text-align: center;
+}
+
+#error_flash{ 
   text-align: center;
 }

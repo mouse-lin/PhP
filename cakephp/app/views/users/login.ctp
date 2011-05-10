@@ -3,8 +3,11 @@
     <div id = "pop_form">
     <div style="width=250px; height=1px"></div>
     <div id="denglu"><b>用户登录</b></div>
+      <?php if($error):?>
+        <div id="error_flash">帐号或密码错误</div>
+      <?php endif; ?>
         <table>
-          <?php echo $this->Form->create('User');?>
+          <?php echo $this->Form->create('User', array('action' => 'login'));?>
             <tr>
                 <td><?php echo $this->Form->input('login',array('label' => "帐号"));?></td>
             </tr>

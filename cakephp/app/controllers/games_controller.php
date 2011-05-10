@@ -3,6 +3,10 @@ class GamesController extends AppController {
 	public $name = 'Games';
   var $uses = array('Game');
 
+  function beforeFilter(){ 
+    #$this->checkSession();
+    $this->getUser();
+  }
 
   function  hot_game(){ 
 

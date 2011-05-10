@@ -51,8 +51,14 @@
       <li class="expert_games"><a href="../games/expert_game" title="期待游戏"></a></li>
       <li class="other_games"><a href="../games/other_game" title="其他游戏"></a></li>
       <li class="contact"><a href="" title="联系我们"></a></li>
+      <?php
+        if($user):
+      ?>
       <li class="setting"><a href="" title="个人设置"></a></li>
       <li class="admin"><a href="" title="管理"></a></li>
+      <?php
+        endif;
+      ?>
     </ul>
    <div id="gdlogo"><div class="logo"></div></div>
     <div id="header">
@@ -71,9 +77,21 @@
 
         <div class="nav_account">
           <div class="gd_sns_right  gd">
-            <a href="#" onclick="signupHandler();" class="notabs">注册</a>
+            <?php if($user): ?>
+            <font color='#ffcc00' size=2>
+              <b><?php echo $user['name'];?></b>
+            </font>
             |
-            <a href="#" onclick="loginHandler();">登录</a>
+            <a href="../users/logout">退出</a>
+            <?php
+              else:
+            ?>
+              <a href="#" onclick="signupHandler();" class="notabs">注册</a>
+              |
+              <a href="#" onclick="loginHandler();">登录</a>
+            <?php
+              endif;
+            ?>
           </div>
           <a class="login_thumb" href="#"><img src="../../img/noavatar_middle.jpg"></a>
         </div>

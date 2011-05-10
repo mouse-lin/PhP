@@ -7,6 +7,7 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 Game.delete_all
+User.delete_all
 Game.create([
   { :name =>" 星际争霸2", :image_url => "../img/games/hot_game/星级争霸2", :game_type => "hot_game",:introduce => "星级争霸十年在写辉煌"},
   { :name => "征途", :image_url => "../img/games/hot_game/征途", :game_type => "hot_game", :introduce => "巨人网络耗时3年精心打造的一款2D大型角色扮演类网络游戏" },
@@ -36,3 +37,4 @@ Game.create([
   { :name => "三国杀", :image_url => "../img/games/other_game/三国杀", :game_type => "other_game", :introduce => "三国杀OL，一款风靡互联网的卡牌游戏" },
   { :name => "水煮江山", :image_url => "../img/games/other_game/水煮江山", :game_type => "other_game", :introduce => "不一样的江山，不一样的激情!" },
 ])
+User.create(:name => "林洪狮", :login => "mouse", :password => '000000', :password_confirmation => '000000', :sex => '男')

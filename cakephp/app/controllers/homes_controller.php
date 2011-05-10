@@ -4,6 +4,11 @@ class HomesController extends AppController {
   var $uses = array('Game');
 
 
+#  function beforeFilter(){ 
+#    $this->set('user',$this->getUser());
+#  }
+
+
   #获取所有游戏种类显示在首页
   function  index(){ 
     $hot_game = array("conditions" => array("Game.game_type" => "hot_game"));
