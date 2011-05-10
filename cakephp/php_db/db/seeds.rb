@@ -37,4 +37,4 @@ Game.create([
   { :name => "三国杀", :image_url => "../img/games/other_game/三国杀", :game_type => "other_game", :introduce => "三国杀OL，一款风靡互联网的卡牌游戏" },
   { :name => "水煮江山", :image_url => "../img/games/other_game/水煮江山", :game_type => "other_game", :introduce => "不一样的江山，不一样的激情!" },
 ])
-User.create(:name => "林洪狮", :login => "mouse", :password => '000000', :password_confirmation => '000000', :sex => '男')
+User.create(:name => "林洪狮", :login => "mouseshi", :password => '123456', :password_confirmation => '123456', :sex => '男',:email => '910664586@qq.com')

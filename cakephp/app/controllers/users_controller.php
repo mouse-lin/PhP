@@ -4,21 +4,21 @@ class UsersController extends AppController {
 	public $name = 'Users';
   var $uses = array('User');
 
-  #用户登录与验证界面
+  #注意
+  #用户登录与验证界面,进行密码比较时候必须使用 === ,使用 == 会出现数值比较,类似 "00" == "000", 返回true;
   function  login(){ 
     $this->layout = "login_layout";
     $this->set('error',false);
-    if(!empty($this->data)){ 
-      #$this->redirect(array('action' => 'welcome'));
-      $someone = $this->User->findByLogin($this->data['User']['login']);
-      if(!empty($someone['User']['password']) && $someone['User']['password'] == $this->data['User']['password'])  
+    if(!empty($this->data) ){ 
+      $someone = $this->User->findByLogin($this->data['User']['login']); 
+      if(!empty($someone['User']['password']) && $someone['User']['password'] === $this->data['User']['password'])  
       { 
         $this->Session->write('User', $someone['User']);  
         $this->redirect('/users/welcome');  
       }else{ 
         $this->set('error', true); 
       }
-    }
+    } 
   }
 
   #用户注册界面
