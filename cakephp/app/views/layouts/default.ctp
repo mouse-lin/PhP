@@ -42,7 +42,7 @@
       };
 
       function signupHandler() { 
-          UserVoice.PopIn.show('600px', '300px', "/users/signup");
+          UserVoice.PopIn.show('600px', '400px', "/users/signup");
       }
     </script>
     <ul id="navigation">
@@ -78,7 +78,7 @@
         <div class="nav_account">
           <div class="gd_sns_right  gd">
             <?php if($user): ?>
-            <font color='#ffcc00' size=2>
+            <font color='#ffcc00' size=1>
               <b><?php echo $user['name'];?></b>
             </font>
             |

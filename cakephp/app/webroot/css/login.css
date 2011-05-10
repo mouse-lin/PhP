@@ -101,9 +101,15 @@ table {
     margin: auto;
     background-color: #FFFFFF;
 }
-#login_main_container {
+#login_main_container_f {
 	  width: 580px;
     height: 280px;
+    background-color: #FFFFFF;
+    clear: both;
+}
+#login_main_container_s {
+	  width: 580px;
+    height: 380px;
     background-color: #FFFFFF;
     clear: both;
 }
@@ -596,6 +602,14 @@ input.submit {
 
 label {
     width: 70px;
+    float: left;
+    padding: 3px 5px 0 0;
+    color: #59a5bf;
+    text-align: right;
+}
+
+#sex { 
+    width: 119px;
     float: left;
     padding: 3px 5px 0 0;
     color: #59a5bf;

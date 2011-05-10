@@ -1,4 +1,4 @@
-<div id="login_main_container">
+<div id="login_main_container_f">
     <div class="header_roundedcornr_top_370248"><div>&nbsp;</div></div>
     <div id = "pop_form">
     <div style="width=250px; height=1px"></div>
@@ -9,10 +9,10 @@
         <table>
           <?php echo $this->Form->create('User', array('action' => 'login'));?>
             <tr>
-                <td><?php echo $this->Form->input('login',array('label' => "帐号"));?></td>
+                <td><?php echo $this->Form->input('login',array('label' => "帐号:"));?></td>
             </tr>
             <tr>
-                <td><?php echo $this->Form->input('password',array('label' => "密码", 'type' => 'password')); ?></td>
+                <td><?php echo $this->Form->input('password',array('label' => "密码:", 'type' => 'password')); ?></td>
             </tr>
         </table>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

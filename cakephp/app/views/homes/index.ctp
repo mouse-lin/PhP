@@ -23,7 +23,6 @@
 <div class="bd">
   <! 最热门游戏 >
     <?php $time = 0 ?>
-    <?php echo $user['id'] ?>
   	<?php
   	  foreach ($hot_games as $hot_game):
   	?>

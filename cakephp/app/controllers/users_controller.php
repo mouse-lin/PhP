@@ -24,6 +24,10 @@ class UsersController extends AppController {
   #用户注册界面
   function  signup(){ 
     $this->layout = "login_layout";
+    if(!empty($this->data)){ 
+      if($this->User->save($this->data)){ 
+      }
+    }
   }
 
   #用户登录校验
