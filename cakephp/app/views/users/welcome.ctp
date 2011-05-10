@@ -6,7 +6,7 @@
     }
 </script>
 <body onload="onloadHandler();">
-  <div id="login_main_container">
+  <div id="login_main_container_f">
     <div class="header_roundedcornr_top_370248"><div>&nbsp;</div></div>
     <div class="welcome_content">
       登录成功，请稍候...

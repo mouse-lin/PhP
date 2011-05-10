@@ -26,19 +26,22 @@ class UsersController extends AppController {
     $this->layout = "login_layout";
     if(!empty($this->data)){ 
       if($this->User->save($this->data)){ 
+        $someone = $this->User->findByLogin($this->data['User']['login']);
+        $this->Session->write('User', $someone['User']);  
+        $this->redirect('/users/welcome_signup');  
       }
     }
   }
 
-  #用户登录校验
-  function login_authenticate(){ 
-    $this->redirect(array('controller' => 'users', 'action' => 'welcome'));
-  }
-
+  #登录成功后返回的页面
   function welcome(){ 
     $this->layout = "login_layout";
   }
 
+  #注册成功后登录界面
+  function welcome_signup(){ 
+    $this->layout = "login_layout";
+  }
 
   #用户退出
   function logout(){ 

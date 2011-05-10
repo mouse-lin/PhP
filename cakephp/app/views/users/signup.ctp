@@ -3,6 +3,17 @@
     <div id = "pop_form">
     <div style="width=150px; height=0.5px"></div>
     <div id="denglu"><b>用户注册</b></div>
+    <script type="text/javascript">
+      $("#FormQuery").validate({ 
+        rules: { 
+          login: { required: true }
+        },
+        messages:{ 
+          login: { required: '请输入用户名' }
+        }
+
+      })
+    </script>   
         <table>
           <?php echo $this->Form->create('User',array('id' => 'commentForm'));?>
             <tr>

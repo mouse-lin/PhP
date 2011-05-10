@@ -2,15 +2,45 @@
 class User extends AppModel {
   var $name = "User";
 
-  #数据校验
+  #用户注册数据校验
 	var $validate = array(
-		'login' => array(
-        'required' => true,
-        'message' => '帐号不能为空'
+		'password' => array( 
+      'rule' => '/^.{6,40}$/',
+      'message' => '密码不能为空/且至少为6个字符'
      ),
-		'password' => '/^.{6,40}$/',
-		'email' => 'email'
+		'email' => array(
+      'emailRule-1' => array(
+        'rule' => 'email',
+        'message' => '邮箱格式不正确',
+        'last' => true
+      ),
+      'emailRule-2' => array(
+        'rule' => 'isUnique',
+        'message' => '邮箱已经存在'
+      )
+     ),
+     'login' => array(
+        'loginRule-2' => array(
+          'rule' => '/^.{6,40}$/',
+          'message' => '帐号不能为空/且至少6个字符',
+          'last' => true
+        ),
+        'loginRule-1' => array(
+          'rule' => 'isUnique',
+          'message' => '帐号已经存在',
+        )
+     ),
+     'password_confirmation' => array(
+       'rule' => array('equalto'),
+       'message' => '密码确认与密码不一致'
+     )
   	);
 
+  
+  #Mouse
+  #自定义校验，用于校验密码与密码确认是否一致
+  function equalto($data){ 
+    return $this->data['User']['password'] == $this->data['User']['password_confirmation'];
+  }
 }
 ?>

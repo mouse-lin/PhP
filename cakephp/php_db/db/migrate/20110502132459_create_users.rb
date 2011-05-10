@@ -8,6 +8,12 @@ class CreateUsers < ActiveRecord::Migration
       t.string  :email
       t.string  :phone
       t.string  :sex
+      t.string  :address
+      t.string  :img
+      t.string  :qq
+      t.string  :msn
+      t.date    :birthday
+      
 
       t.timestamps
     end
