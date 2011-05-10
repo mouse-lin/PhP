@@ -15,7 +15,7 @@
 <div class="mainbox forumlist">
   <div class="hd">
     <h3>
-      <a href="http://bbs.duowan.com/index.php?gid=59">热门游戏专区</a>
+      <a href="../games/hot_game">热门游戏专区</a>
     </h3>
   </div>
 </div>
@@ -67,7 +67,7 @@
 <div class="mainbox forumlist">
   <div class="hd">
     <h3>
-      <a href="">
+      <a href="../games/expert_game">
         最期待游戏专区
       </a>
     </h3>
@@ -121,7 +121,7 @@
 <div class="mainbox forumlist">
   <div class="hd">
     <h3>
-      <a href="http://bbs.duowan.com/index.php?gid=294">
+      <a href="../games/other_game">
         其他专区
       </a>
     </h3>
