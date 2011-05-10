@@ -42,6 +42,11 @@ ActiveRecord::Schema.define(:version => 20110509024929) do
     t.string   "email"
     t.string   "phone"
     t.string   "sex"
+    t.string   "address"
+    t.string   "img"
+    t.string   "qq"
+    t.string   "msn"
+    t.date     "birthday"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
