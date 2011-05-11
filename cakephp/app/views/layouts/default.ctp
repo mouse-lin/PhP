@@ -121,30 +121,60 @@
 <?php
   if($user):
 ?>
-  <! 用来显示用户信息的 >
+  <! 用来显示用户信息以及聊天窗口 >
 		<script type="text/javascript">
-		(function($){
-			$(document).ready(function(){
-				$.jGrowl("当前在线用户: <br> <?php
-				  foreach( $on_line_users as $on_line_user ):
-            echo '<a href=# onclick=$.jGrowl();><font color=#ffcc00>';
-            echo $on_line_user["User"]["name"];
-            echo '</font></a>';
-            echo '<br>';
-          endforeach;
-				?>", { 
-          sticky: true,
-          header: "欢迎 <?php echo $user['name']?> || 当前在线用户人数: <?php
-            echo count($on_line_users)
-          ?> ",
-          position: "bottom-right",
-        });
-			});
-		})(jQuery);
+      new_type = 1;
+	  	(function($){
+	  		$(document).ready(function(){
+	  			$.jGrowl("当前在线用户: <br> <?php foreach( $on_line_users as $on_line_user ):?> <a href=# onclick=getjGrowl();><font color=#ffcc00> <?php echo $on_line_user["User"]["name"];?> </font></a><br> <?php endforeach;?>",
+            { 
+            sticky: true,
+            header: "欢迎 <?php echo $user['name']?> || 当前在线用户人数: <?php
+              echo count($on_line_users)
+            ?> ",
+            position: "bottom-right",
+          });
+	  		});
+	  	})(jQuery);
+
+    //获取点击之后聊天对话框
+    function getjGrowl(){ 
+      if(new_type == 1){ 
+         var content = "<div id='new_content'></div><br>输入悄悄话(<font color=red>内容不能为空</font>):<input id='new' type='text' name='data[New][contnet]'> </input> <br> <button type='submit' onclick=postNew()>发送</button> <button type='submit' onclick=clearNew() >清空悄悄话</button>";
+         new_type = 0;
+         return $.jGrowl(content,{
+           header: '悄悄话',
+           sticky: true,
+         })
+      }
+    };
+
+    //向后台发送请求
+    function postNew(){ 
+        var news = document.getElementById("new").value;
+        if (news != ""){  
+           //获取时间
+           var date = new Date();
+	         var day = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")[date.getDay()];
+	         var hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+           var minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+	         var second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+           var date_time = day + hour + "-" + minute + "-" +  second;
+           //-------------- 
+           var string = "<font color=#ffcc00>我</font>(" +  date_time + ")说:" + news + "<br>";
+           //string += "<font color=#ffcc00><?php echo $user['name']?></font>  说:";
+           $('#new_content').append(string);
+        } 
+    };
+
+    //用于清空文本框
+    function clearNew(){ 
+      document.getElementById("new").value = "";
+    }
 		</script>
 		<style type="text/css">
 			div.jGrowl-notification {
-        height:       200px;
+        height:       230px;
 			}
 		</style>
 <?php
