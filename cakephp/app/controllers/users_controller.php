@@ -13,6 +13,7 @@ class UsersController extends AppController {
       $someone = $this->User->findByLogin($this->data['User']['login']); 
       if(!empty($someone['User']['password']) && $someone['User']['password'] === $this->data['User']['password'])  
       { 
+        $this->User->save(array("online" => true, "id" => $someone['User']['id'] ));
         $this->Session->write('User', $someone['User']);  
         $this->redirect('/users/welcome');  
       }else{ 
@@ -27,6 +28,7 @@ class UsersController extends AppController {
     if(!empty($this->data)){ 
       if($this->User->save($this->data)){ 
         $someone = $this->User->findByLogin($this->data['User']['login']);
+        $this->User->save(array("online" => true, "id" => $someone['User']['id'] ));
         $this->Session->write('User', $someone['User']);  
         $this->redirect('/users/welcome_signup');  
       }
@@ -45,6 +47,8 @@ class UsersController extends AppController {
 
   #用户退出
   function logout(){ 
+    $user = $this->Session->read("User");
+    $this->User->save(array("online" => false, "id" => $user["id"] ));
     $this->Session->delete('User');   
 	  $this->redirect('/');   
   }

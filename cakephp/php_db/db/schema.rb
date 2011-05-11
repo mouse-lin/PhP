@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20110509024929) do
     t.string   "qq"
     t.string   "msn"
     t.date     "birthday"
+    t.boolean  "online"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

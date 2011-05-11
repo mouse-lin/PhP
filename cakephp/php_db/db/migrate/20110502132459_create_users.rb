@@ -13,6 +13,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string  :qq
       t.string  :msn
       t.date    :birthday
+      t.boolean  :online
       
 
       t.timestamps

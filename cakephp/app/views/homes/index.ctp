@@ -11,7 +11,6 @@
     </form>
   </div>
 </div>
-
 <div class="mainbox forumlist">
   <div class="hd">
     <h3>

@@ -9,9 +9,11 @@
     </title>
     <link rel="stylesheet" type="text/css" href="../../css/style_94.css">
     <link rel="stylesheet" type="text/css" href="../../css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.jgrowl.css">
     <script type="text/javascript" src="../../js/jquery-1.3.2.js"></script>
     <script type="text/javascript" src="../../js/login.js"></script>
     <script type="text/javascript" src="../../js/clock.js"></script>
+    <script type="text/javascript" src="../../js/jquery.jgrowl.js"></script>
   </head>
 
   <body>
@@ -115,6 +117,39 @@
           </ul>
         </div>
       </div>
+
+<?php
+  if($user):
+?>
+  <! 用来显示用户信息的 >
+		<script type="text/javascript">
+		(function($){
+			$(document).ready(function(){
+				$.jGrowl("当前在线用户: <br> <?php
+				  foreach( $on_line_users as $on_line_user ):
+            echo '<a href=# onclick=$.jGrowl();><font color=#ffcc00>';
+            echo $on_line_user["User"]["name"];
+            echo '</font></a>';
+            echo '<br>';
+          endforeach;
+				?>", { 
+          sticky: true,
+          header: "欢迎 <?php echo $user['name']?> || 当前在线用户人数: <?php
+            echo count($on_line_users)
+          ?> ",
+          position: "bottom-right",
+        });
+			});
+		})(jQuery);
+		</script>
+		<style type="text/css">
+			div.jGrowl-notification {
+        height:       200px;
+			}
+		</style>
+<?php
+  endif;
+?>
       <div id="content">
         <div class="inner">
           <div class="main-bd clearfix">
