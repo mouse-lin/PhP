@@ -14,6 +14,10 @@
     <script type="text/javascript" src="../../js/login.js"></script>
     <script type="text/javascript" src="../../js/clock.js"></script>
     <script type="text/javascript" src="../../js/jquery.jgrowl.js"></script>
+
+    <script type="text/javascript" src="../../js/ext-base-debug.js"></script>
+    <script type="text/javascript" src="../../js/ext-all-debug.js"></script>
+
   </head>
 
   <body>
@@ -121,15 +125,16 @@
 <?php
   if($user):
 ?>
+  <!Mouse >
   <! 用来显示用户信息以及聊天窗口 >
 		<script type="text/javascript">
       new_type = 1;
 	  	(function($){
 	  		$(document).ready(function(){
-	  			$.jGrowl("当前在线用户: <br> <?php foreach( $on_line_users as $on_line_user ):?> <a href=# onclick=getjGrowl();><font color=#ffcc00> <?php echo $on_line_user["User"]["name"];?> </font></a><br> <?php endforeach;?>",
+	  			$.jGrowl("当前在线用户: <br> <?php foreach( $on_line_users as $on_line_user ):?> <a href=# onclick=getjGrowl(<?php echo $on_line_user["User"]["id"];?>,'<?php echo $on_line_user["User"]["name"]?>')><font color=#ffcc00> <?php echo $on_line_user["User"]["name"];?> </font></a><br> <?php endforeach;?>",
             { 
             sticky: true,
-            header: "欢迎 <?php echo $user['name']?> || 当前在线用户人数: <?php
+            header: "欢迎 <font color=#ffcc00><?php echo $user['name']?> </font>| 当前在线用户人数: <?php
               echo count($on_line_users)
             ?> ",
             position: "bottom-right",
@@ -138,13 +143,16 @@
 	  	})(jQuery);
 
     //获取点击之后聊天对话框
-    function getjGrowl(){ 
+    function getjGrowl(id,name){ 
       if(new_type == 1){ 
-         var content = "<div id='new_content'></div><br>输入悄悄话(<font color=red>内容不能为空</font>):<input id='new' type='text' name='data[New][contnet]'> </input> <br> <button type='submit' onclick=postNew()>发送</button> <button type='submit' onclick=clearNew() >清空悄悄话</button>";
+         var content = "<div id='new_content'></div><br>输入悄悄话(<font color=red>内容不能为空</font>):<input id='new' type='text' name='data[New][contnet]'> </input> <br> <button type='submit' onclick=postNew()>发送</button> <button type='submit' onclick=clearNew() >清空悄悄话</button> <button type='submit' onclick=clearContent()>清空屏幕</button>";
          new_type = 0;
          return $.jGrowl(content,{
-           header: '悄悄话',
+           header: '悄悄话(对' +'<font color=#ffcc00>' + name + '</font>)',
            sticky: true,
+           close: function(e,m,o){ 
+               new_type = 1;
+           }
          })
       }
     };
@@ -160,17 +168,35 @@
            var minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
 	         var second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
            var date_time = day + hour + "-" + minute + "-" +  second;
+           var new_content = $('#new_content');
            //-------------- 
-           var string = "<font color=#ffcc00>我</font>(" +  date_time + ")说:" + news + "<br>";
+           var string = "<div><font color=#ffcc00>我</font>(" +  date_time + ")说:" + news + "</div>";
            //string += "<font color=#ffcc00><?php echo $user['name']?></font>  说:";
-           $('#new_content').append(string);
-        } 
+           if (new_content[0].childElementCount == 6)
+             new_content.html(string); 
+           else
+             new_content.append(string);
+           $.ajax({ 
+              type: 'post',
+              url: 'messages/add',
+              dataType: 'json',
+              data:  'id = 10'  ,
+           })
+        }else{ 
+          alert('内容不能为空')
+        }
     };
 
     //用于清空文本框
     function clearNew(){ 
       document.getElementById("new").value = "";
+    };
+
+    //清空屏幕!
+    function clearContent(){ 
+      $('#new_content').html("");
     }
+
 		</script>
 		<style type="text/css">
 			div.jGrowl-notification {
@@ -180,6 +206,8 @@
 <?php
   endif;
 ?>
+<! 用户聊天窗口结束>
+
       <div id="content">
         <div class="inner">
           <div class="main-bd clearfix">

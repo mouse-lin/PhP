@@ -53,4 +53,8 @@ class UsersController extends AppController {
 	  $this->redirect('/');   
   }
 
+  function add_message(){ 
+    
+  }
+
 }
