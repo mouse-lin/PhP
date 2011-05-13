@@ -57,11 +57,8 @@ class GamesController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 
-
-  function  hot_game(){ 
+  function show(){ 
+    $type = array("Game.game_type" => $this->params['url']['game_type']);
+    $this->set('games', $this->Game->find("all", array("conditions" => $type)));
   }
-
-
-  function expert_game(){  }
-  function other_game(){  }
 }
