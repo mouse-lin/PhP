@@ -14,10 +14,6 @@
     <script type="text/javascript" src="../../js/login.js"></script>
     <script type="text/javascript" src="../../js/clock.js"></script>
     <script type="text/javascript" src="../../js/jquery.jgrowl.js"></script>
-
-    <script type="text/javascript" src="../../js/ext-base-debug.js"></script>
-    <script type="text/javascript" src="../../js/ext-all-debug.js"></script>
-
   </head>
 
   <body>
@@ -125,18 +121,21 @@
 <?php
   if($user):
 ?>
+
   <!Mouse >
   <! 用来显示用户信息以及聊天窗口 >
 		<script type="text/javascript">
-      new_type = 1;
 	  	(function($){
 	  		$(document).ready(function(){
+         jGrwol_type = 1;
+         new_type = 1;
+         new_type_all = 1;
 	  			$.jGrowl("当前在线用户: <br> <?php foreach( $on_line_users as $on_line_user ):?> <a href=# onclick=getjGrowl(<?php echo $on_line_user["User"]["id"];?>,'<?php echo $on_line_user["User"]["name"]?>')><font color=#ffcc00> <?php echo $on_line_user["User"]["name"];?> </font></a><br> <?php endforeach;?>",
             { 
             sticky: true,
             header: "欢迎 <font color=#ffcc00><?php echo $user['name']?> </font>| 当前在线用户人数: <?php
               echo count($on_line_users)
-            ?> ",
+            ?> | <a href='#' onclick=getAlljGrowl() ><font color=#ffcc00> 群聊 </font></a> ",
             position: "bottom-right",
           });
 	  		});
@@ -144,20 +143,107 @@
 
     //获取点击之后聊天对话框
     function getjGrowl(id,name){ 
+      user_id = id;
+      jGrwol_type = 0;
       if(new_type == 1){ 
-         var content = "<div id='new_content'></div><br>输入悄悄话(<font color=red>内容不能为空</font>):<input id='new' type='text' name='data[New][contnet]'> </input> <br> <button type='submit' onclick=postNew()>发送</button> <button type='submit' onclick=clearNew() >清空悄悄话</button> <button type='submit' onclick=clearContent()>清空屏幕</button>";
-         new_type = 0;
+         var content = "<div id='new_content'></div><br>输入悄悄话(<font color=red>内容不能为空</font>):<br><input id='new' type='text' name='data[New][contnet]'> </input> <br> <button type='submit' onclick=postNew()>发送</button> <button type='submit' onclick=clearNew() >清空悄悄话</button> <button type='submit' onclick=clearContent()>清空屏幕</button>";
+         new_type = 0; //为限制窗口弹出，目前暂时取消
          return $.jGrowl(content,{
-           header: '悄悄话(对' +'<font color=#ffcc00>' + name + '</font>)',
+           header: '悄悄话',
            sticky: true,
            close: function(e,m,o){ 
                new_type = 1;
+               jGrwol_type = 1;
            }
          })
       }
     };
 
-    //向后台发送请求
+    //群聊窗口
+    function getAlljGrowl(){ 
+      if(new_type_all == 1){ 
+      var content = "<div id='all_content'></div><br>输入信息(<font color=red>内容不能为空</font>):<br><input id='all_new' type='text'></input><br><button type='sumbit' onclick=postAllNew()>发送</button><button type='sumbit' onclick=clearAllNew()>清空信息</button>";
+      new_type_all = 0;
+      getAllMessage();
+      return $.jGrowl(content,{ 
+        header: '群聊',
+        sticky: true,
+        close: function(e,m,o){ 
+          new_type_all = 1;
+        }
+      });
+      }
+    };
+
+    //清空表格信息
+    function clearAllNew(){ 
+      document.getElementById("all_new").value = "";
+    };
+
+    //定时获取群聊信息
+    function getAllMessage(){ 
+      $.ajax({ 
+        type: 'get',
+        cache: false,
+        contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
+        url: 'messages/get_all_message',
+        success: function(msg){ 
+          if(msg){ 
+            var all_content = $('#all_content');
+              if(all_content[0] == undefined)
+                clearTimeout(getAllMessage);
+              else{  
+                if (all_content[0].childElementCount >= 4)
+                  all_content.html(msg); 
+                else
+                  all_content.append(msg);
+              }
+          }
+        },
+      });
+      window.setTimeout(function() {getAllMessage();}, 2000);
+    };
+
+
+   //群聊向后台发送请求
+    function postAllNew(){ 
+        var news = document.getElementById("all_new").value;
+        if (news != ""){  
+           //获取时间
+           var date = new Date();
+	         var day = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")[date.getDay()];
+	         var hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+           var minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+	         var second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+           var date_time = day + hour + "-" + minute + "-" +  second;
+           var all_content = $('#all_content');
+           //注释掉直接显示内容 
+           //-------------- 
+          // var string = "<div><font color=#ffcc00><?php echo $user["name"]?></font>(" +  date_time + ")说:" + news + "</div>";
+          // if (all_content[0].childElementCount >= 4)
+          //   all_content.html(string); 
+          // else
+          //   all_content.append(string);
+           $.ajax({ 
+              type: 'post',
+              cache: false,
+              contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
+              url: 'messages/all_message',
+              failure: function(){ 
+                alert('发送失败!');
+              },
+              data:  { 
+                content: $("#all_new").val(),
+                date_time: date_time,
+                send_name: '<?php echo $user["name"]?>',
+              },
+           });
+        }else{ 
+          alert('内容不能为空')
+        }
+    };
+
+    //悄悄话向后台发送请求
     function postNew(){ 
         var news = document.getElementById("new").value;
         if (news != ""){  
@@ -171,17 +257,26 @@
            var new_content = $('#new_content');
            //-------------- 
            var string = "<div><font color=#ffcc00>我</font>(" +  date_time + ")说:" + news + "</div>";
-           //string += "<font color=#ffcc00><?php echo $user['name']?></font>  说:";
-           if (new_content[0].childElementCount == 6)
+           if (new_content[0].childElementCount >= 4)
              new_content.html(string); 
            else
              new_content.append(string);
+
            $.ajax({ 
               type: 'post',
+              cache: false,
+              contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
               url: 'messages/add',
-              dataType: 'json',
-              data:  'id = 10'  ,
-           })
+              failure: function(){ 
+                alert('发送失败!');
+              },
+              data:  { 
+                content: $("#new").val(),
+                date_time: date_time,
+                send_name: '<?php echo $user["name"]?>',
+                user_id: user_id,
+              },
+           });
         }else{ 
           alert('内容不能为空')
         }
@@ -197,16 +292,52 @@
       $('#new_content').html("");
     }
 
-		</script>
+	</script>
 		<style type="text/css">
 			div.jGrowl-notification {
-        height:       230px;
+        height:       190px;
 			}
 		</style>
 <?php
   endif;
 ?>
 <! 用户聊天窗口结束>
+
+  <!Mouse>
+  <!用来定时获取后台数据，查看是否有信息>
+  <script type="text/javascript">
+     function getMessage(){ 
+       $.ajax({ 
+         type: 'get',
+         cache: false,
+         contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
+         url: 'messages/get_message',
+         success: function(msg){ 
+           if(msg){ 
+             if(jGrwol_type == 1)
+               getjGrowl();
+             setTimeout(function(){ 
+                var new_content = $('#new_content');
+                if(new_content[0] == undefined){  
+                  new_content.html(msg);
+                }
+                else{  
+                  if (new_content[0].childElementCount >= 4)
+                    new_content.html(msg); 
+                  else
+                    new_content.append(msg);
+                }
+             },1000);
+             clearTimeout(); //清除时间定时
+           }
+         },
+       });
+     window.setTimeout(function() {getMessage();}, 3000);
+     };
+     getMessage();
+  </script>
+
+    <div id="two" class="jGrowl top-right"></div>
 
       <div id="content">
         <div class="inner">
