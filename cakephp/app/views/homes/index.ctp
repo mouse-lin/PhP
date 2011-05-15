@@ -14,7 +14,7 @@
 <div class="mainbox forumlist">
   <div class="hd">
     <h3>
-      <a href="../games/index?game_type=hot_game">热门游戏专区</a>
+      <a href="../games/show?game_type=hot_game">热门游戏专区</a>
     </h3>
   </div>
 </div>
@@ -34,18 +34,18 @@
             <tbody>
               <tr>
                 <td align="left" valign="top" style="width:1px;">
-                  <a href="#">
+                  <a href="../articles/index?game_id=<?php echo $hot_game["Game"]["id"] ?>">
                     <img style="margin-right: 10px" src= "<?php echo $hot_game["Game"]["image_url"]?>.jpg" align="left" alt="" border="0">
                   </a>
                 </td>
                 <td align="left" valign="top">
-                  <a href="#">
+                  <a href="../articles/index?game_id=<?php echo $hot_game["Game"]["id"] ?>">
                     <b><?php echo $hot_game["Game"]["name"]?></b>
                   </a>
                   <br>
                   <span class="smalltxt">
                     <?php echo $hot_game["Game"]["introduce"] ?>！&nbsp;|&nbsp;
-                    <a href="#">
+                    <a href="../articles/index?game_id=<?php echo $hot_game["Game"]["id"] ?>">
                       <font color="blue">进入专区</font>
                     </a>
                   </span>
@@ -66,7 +66,7 @@
 <div class="mainbox forumlist">
   <div class="hd">
     <h3>
-      <a href="../games/index?game_type=expert_game">
+      <a href="../games/show?game_type=expert_game">
         最期待游戏专区
       </a>
     </h3>
@@ -87,18 +87,18 @@
             <tbody>
               <tr>
                 <td align="left" valign="top" style="width:1px;">
-                  <a href="#">
+                  <a href="../articles/index?game_id=<?php echo $expert_game["Game"]["id"] ?>">
                     <img style="margin-right: 10px" src= "<?php echo $expert_game["Game"]["image_url"]?>.jpg" align="left" alt="" border="0">
                   </a>
                 </td>
                 <td align="left" valign="top">
-                  <a href="#">
+                  <a href="../articles/index?game_id=<?php echo $expert_game["Game"]["id"] ?>">
                     <b><?php echo $expert_game["Game"]["name"]?></b>
                   </a>
                   <br>
                   <span class="smalltxt">
                     <?php echo $expert_game["Game"]["introduce"] ?>！&nbsp;|&nbsp;
-                    <a href="#">
+                    <a href="../articles/index?game_id=<?php echo $expert_game["Game"]["id"] ?>">
                       <font color="blue">进入专区</font>
                     </a>
                   </span>
@@ -120,7 +120,7 @@
 <div class="mainbox forumlist">
   <div class="hd">
     <h3>
-      <a href="../games/index?game_type=other_game">
+      <a href="../games/show?game_type=other_game">
         其他专区
       </a>
     </h3>
@@ -142,18 +142,18 @@
             <tbody>
               <tr>
                 <td align="left" valign="top" style="width:1px;">
-                  <a href="#">
+                  <a href="../articles/index?game_id=<?php echo $other_game["Game"]["id"] ?>">
                     <img style="margin-right: 10px" src= "<?php echo $other_game["Game"]["image_url"]?>.jpg" align="left" alt="" border="0">
                   </a>
                 </td>
                 <td align="left" valign="top">
-                  <a href="#">
+                  <a href="../articles/index?game_id=<?php echo $other_game["Game"]["id"] ?>">
                     <b><?php echo $other_game["Game"]["name"]?></b>
                   </a>
                   <br>
                   <span class="smalltxt">
                     <?php echo $other_game["Game"]["introduce"] ?>！&nbsp;|&nbsp;
-                    <a href="#">
+                    <a href="../articles/index?game_id=<?php echo $other_game["Game"]["id"] ?>">
                       <font color="blue">进入专区</font>
                     </a>
                   </span>

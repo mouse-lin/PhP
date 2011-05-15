@@ -1,26 +1,25 @@
-<div><a href="../articles/new">发表文章</a></div>
-<table>
+<div class="mainbox forumlist">
+<div class="hd">
+    <h3 style="padding-left:27px;padding-bottom:5px;"><?php echo $gameType ?>专区</h3>
+</div>
+</div>
+<table style="width:90%;">
     <tr>
-        <th>&nbsp&nbsp</th>
-        <th>&nbsp&nbsp</th>
-        <th>&nbsp&nbsp</th>
-        <th>&nbsp&nbsp</th>
-        <th>&nbsp&nbsp</th>
-        <th>&nbsp&nbsp</th>
-        <th>标题</th>
-        <th>作者</th>
-        <th>回复数</th>
+        <td style="padding-left:152px;">游戏</td>
+        <th style="text-align:center;">主题</th>
     </tr>
-  <?php foreach ($articles as $article): ?>
+  <?php foreach ($games as $game): ?>
     <tr>
-        <td>&nbsp&nbsp</td>
-        <td>&nbsp&nbsp</td>
-        <td>&nbsp&nbsp</td>
-        <td>&nbsp&nbsp</td>
-        <td>&nbsp&nbsp</td>
-        <td>&nbsp&nbsp</td>
-        <td><?php echo $article ?></td>
-        <td><?php echo $article ?></td>
+        <th>
+            <a href="../articles/index?game_id=<?php echo $game["Game"]["id"] ?>">
+                <img border="0" align="left" alt="" src="<?php echo $game["Game"]["image_url"] ?>.jpg" style="margin-right: 10px"></img>
+            </a>
+            <h2 style="display:inline;"><a href="../articles/index?game_id=<?php echo $game["Game"]["id"] ?>"><?php echo $game["Game"]["name"] ?></a></h2>
+            <p><?php echo $game["Game"]["introduce"] ?> | <a href="../articles/index?game_id=<?php echo $game["Game"]["id"] ?>" style="color:blue;">进入专区</a></p>
+        </th>
+        <td style="text-align:center;">
+            <?php echo count($game["Article"]) ?>
+        </td>
     </tr>
   <?php endforeach; ?>
 </table>
