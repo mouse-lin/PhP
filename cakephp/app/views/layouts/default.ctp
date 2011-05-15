@@ -23,19 +23,17 @@
 
   <body>
     <ul id="navigation">
-      <li class="home"><a href="../homes" title="主页"></a></li>
-      <li class="hot_games"><a href="../games/hot_game" title="热门游戏"></a></li>
-      <li class="expert_games"><a href="../games/expert_game" title="期待游戏"></a></li>
-      <li class="other_games"><a href="../games/other_game" title="其他游戏"></a></li>
-      <li class="contact"><a href="../contacts/detail" title="开发成员"></a></li>
-      <?php
-        if($user):
-      ?>
-      <li class="setting"><a href="" title="个人设置"></a></li>
-      <li class="admin"><a href="" title="管理"></a></li>
-      <?php
-        endif;
-      ?>
+      <li class="home"><a href="../../homes" title="主页"></a></li>
+      <li class="hot_games"><a href="../../games/hot_game" title="热门游戏"></a></li>
+      <li class="expert_games"><a href="../../games/expert_game" title="期待游戏"></a></li>
+      <li class="other_games"><a href="../../games/other_game" title="其他游戏"></a></li>
+      <li class="contact"><a href="../../contacts/detail" title="开发成员"></a></li>
+      <?php if($user): ?>
+        <li class="setting"><a href="" title="个人设置"></a></li>
+        <?php if($user["name"] == "林洪狮" ): ?>
+          <li class="admin"><a href="../../games" title="管理"></a></li>
+        <?php endif ?>
+      <?php endif; ?>
     </ul>
    <div id="gdlogo"><div class="logo"></div></div>
     <div id="header">
@@ -174,7 +172,7 @@
         type: 'get',
         cache: false,
         contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
-        url: '../messages/get_all_message',
+        url: '../../messages/get_all_message',
         success: function(msg){ 
           if(msg){ 
             var all_content = $('#all_content');
@@ -216,7 +214,7 @@
               type: 'post',
               cache: false,
               contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
-              url: '../messages/all_message',
+              url: '../../messages/all_message',
               failure: function(){ 
                 alert('发送失败!');
               },
@@ -254,7 +252,7 @@
               type: 'post',
               cache: false,
               contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
-              url: '../messages/add',
+              url: '../../messages/add',
               failure: function(){ 
                 alert('发送失败!');
               },
@@ -287,7 +285,7 @@
          type: 'get',
          cache: false,
          contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
-         url: '../messages/get_message',
+         url: '../../messages/get_message',
          success: function(msg){ 
            if(msg){ 
              var id = msg.substr(msg.indexOf("id"));
@@ -313,7 +311,7 @@
        });
      single_message = setTimeout(function() {getMessage();}, 1000); //单聊设置时间
      };
-     getMessage();
+     //getMessage();
 	</script>
 		<style type="text/css">
 			div.jGrowl-notification {
