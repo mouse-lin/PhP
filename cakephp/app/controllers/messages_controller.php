@@ -20,6 +20,7 @@ class MessagesController extends AppController {
     $messages = $this->Message->find("all",array('conditions' => array("user_id" => $user["id"] , "new_type" => "new"),'limit' => 4));
     if($messages){  
       foreach ( $messages as $message){  
+        $user = $this->User->find("first",array('conditions' => array( 'name' => $message["Message"]["send_name"] )));
         $this->Message->save(array("new_type" => false,"id" => $message["Message"]["id"]));
         echo "<div><font color=#ffcc00>";
         echo $message["Message"]["send_name"];
@@ -28,6 +29,8 @@ class MessagesController extends AppController {
         echo ")说:";
         echo $message["Message"]["content"];
         echo "</div>";
+        echo "id"; 
+        echo $user["User"]["id"];
       }
     }
   }

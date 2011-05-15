@@ -103,11 +103,23 @@
             sticky: true,
             header: "欢迎 <font color=#ffcc00><?php echo $user['name']?> </font>| 当前在线用户人数: <?php
               echo count($on_line_users)
-            ?> | <a href='#' onclick=getAlljGrowl() ><font color=#ffcc00> 群聊 </font></a> ",
+            ?> | <a href='#' onclick=getAlljGrowl() ><font color=#ffcc00> 群聊 </font></a> <br> <a href='#' onclick='shieldMessage()'><font color=#ffcc00>屏蔽信息接受</font></a> | <a href='#' onclick='openMessage()'><font color=#ffcc00>启动信息接受</font></a> ",
             position: "bottom-right",
           });
 	  		});
 	  	})(jQuery);
+
+
+    //屏蔽单个信息接受
+    function shieldMessage(){ 
+      clearTimeout( single_message );
+      alert('屏蔽信息接受成功!');
+    };
+
+    function openMessage(){ 
+      getMessage();
+      alert('启动信息接受成功!');
+    };
 
     //获取点击之后聊天对话框
     function getjGrowl(id,name){ 
@@ -138,6 +150,7 @@
         sticky: true,
         close: function(e,m,o){ 
           new_type_all = 1;
+          clearTimeout( all_message_timeout ); //取消获取群聊信息
         }
       });
       }
@@ -154,7 +167,7 @@
         type: 'get',
         cache: false,
         contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
-        url: 'messages/get_all_message',
+        url: '../messages/get_all_message',
         success: function(msg){ 
           if(msg){ 
             var all_content = $('#all_content');
@@ -169,7 +182,7 @@
           }
         },
       });
-      window.setTimeout(function() {getAllMessage();}, 2000);
+      all_message_timeout = setTimeout(function() {getAllMessage();}, 2000);
     };
 
 
@@ -196,7 +209,7 @@
               type: 'post',
               cache: false,
               contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
-              url: 'messages/all_message',
+              url: '../messages/all_message',
               failure: function(){ 
                 alert('发送失败!');
               },
@@ -234,7 +247,7 @@
               type: 'post',
               cache: false,
               contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
-              url: 'messages/add',
+              url: '../messages/add',
               failure: function(){ 
                 alert('发送失败!');
               },
@@ -267,11 +280,14 @@
          type: 'get',
          cache: false,
          contentType: "application/x-www-form-urlencoded; charset=utf-8", //必须添加这个后台才可以获取
-         url: 'messages/get_message',
+         url: '../messages/get_message',
          success: function(msg){ 
            if(msg){ 
+             var id = msg.substr(msg.indexOf("id"));
+             msg = msg.replace(id,"");
+             id = parseInt( id.replace("id","") );
              if(jGrwol_type == 1)
-               getjGrowl();
+               getjGrowl(id);
              setTimeout(function(){ 
                 var new_content = $('#new_content');
                 if(new_content[0] == undefined){  
@@ -288,11 +304,9 @@
            }
          },
        });
-     window.setTimeout(function() {getMessage();}, 3000);
+     single_message = setTimeout(function() {getMessage();}, 3000); //单聊设置时间
      };
      getMessage();
-
-
 	</script>
 		<style type="text/css">
 			div.jGrowl-notification {
