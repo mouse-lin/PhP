@@ -5946,4 +5946,7 @@ div.fans p
 {
 	float:right;
 }
-
+.jieshao_nr_left{
+	float:left;
+	margin-right:19px;
+}

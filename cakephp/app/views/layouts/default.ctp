@@ -10,11 +10,15 @@
     <link rel="stylesheet" type="text/css" href="../../css/style_94.css">
     <link rel="stylesheet" type="text/css" href="../../css/menu_style.css">
     <link rel="stylesheet" type="text/css" href="../../css/jquery.jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.lightbox-0.5.css" media="screen" />
+    
     <script type="text/javascript" src="../../js/jquery-1.3.2.js"></script>
     <script type="text/javascript" src="../../js/login.js"></script>
     <script type="text/javascript" src="../../js/menu.js"></script>
     <script type="text/javascript" src="../../js/clock.js"></script>
     <script type="text/javascript" src="../../js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="../../js/jquery.lightbox-0.5.js"></script>
+    
   </head>
 
   <body>
@@ -42,10 +46,13 @@
 
         <! 时间动态显示(js实现) >
         <span id ='clock' style="float:left; margin-right:6px;"> 
-          <SCRIPT type=text/javascript>
+          <script type=text/javascript>
               var clock = new Clock();
               clock.display(document.getElementById("clock"));
-            </SCRIPT>
+              $(function() {
+                  $('#gallery a').lightBox();
+              });
+            </script>
         </span>
 
         <div class="nav_account">
@@ -304,7 +311,7 @@
            }
          },
        });
-     single_message = setTimeout(function() {getMessage();}, 3000); //单聊设置时间
+     single_message = setTimeout(function() {getMessage();}, 1000); //单聊设置时间
      };
      getMessage();
 	</script>

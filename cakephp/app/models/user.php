@@ -8,6 +8,10 @@ class User extends AppModel {
       'rule' => '/^.{6,40}$/',
       'message' => '密码不能为空/且至少为6个字符'
      ),
+    'name' => array(
+      'rule' => '/^.{2,40}$/',
+      'message' => '姓名不能为空/且至少为2个字符'
+    ),
 		'email' => array(
       'emailRule-1' => array(
         'rule' => 'email',
