@@ -59,6 +59,7 @@
             <font color='#ffcc00' size=1>
               <b><?php echo $user['name'];?></b>
             </font>
+              <b><a href="#" onclick='showjGrowl();'>(<font color='#ffcc00'>悄悄话</font>)</a></b>
             |
             <a href="../users/logout">退出</a>
             <?php
@@ -86,7 +87,7 @@
               <a href="">搜索</a>
               |
             </li>
-            <li id="plugin" class="dropmenu" onmouseover="showMenu(this.id)">
+            <li id="plugin" class="dropmenu">
               <a href="">论坛应用</a>
               |
             </li>
@@ -103,17 +104,28 @@
          jGrwol_type = 1;
          new_type = 1;
          new_type_all = 1;
-	  			$.jGrowl("当前在线用户: <br> <?php foreach( $on_line_users as $on_line_user ):?> <a href=# onclick=getjGrowl(<?php echo $on_line_user["User"]["id"];?>,'<?php echo $on_line_user["User"]["name"]?>')><font color=#ffcc00> <?php echo $on_line_user["User"]["name"];?> </font></a><br> <?php endforeach;?>",
+         show_type = 1;
+         showjGrowl();
+	  		});
+	  	})(jQuery);
+
+
+    function showjGrowl(){ 
+        if (show_type == 1){  
+            show_type = 0;
+  		      return $.jGrowl("当前在线用户: <br> <?php foreach( $on_line_users as $on_line_user ):?> <a href=# onclick=getjGrowl(<?php echo $on_line_user["User"]["id"];?>,'<?php echo $on_line_user["User"]["name"]?>')><font color=#ffcc00> <?php echo $on_line_user["User"]["name"];?> </font></a><br> <?php endforeach;?>",
             { 
             sticky: true,
             header: "欢迎 <font color=#ffcc00><?php echo $user['name']?> </font>| 当前在线用户人数: <?php
               echo count($on_line_users)
             ?> | <a href='#' onclick=getAlljGrowl() ><font color=#ffcc00> 群聊 </font></a> <br> <a href='#' onclick='shieldMessage()'><font color=#ffcc00>屏蔽信息接受</font></a> | <a href='#' onclick='openMessage()'><font color=#ffcc00>启动信息接受</font></a> ",
             position: "bottom-right",
-          });
-	  		});
-	  	})(jQuery);
-
+            close: function(e,m,o){ 
+                show_type = 1;
+            }
+            });
+        };
+    };
 
     //屏蔽单个信息接受
     function shieldMessage(){ 
@@ -311,7 +323,7 @@
        });
      single_message = setTimeout(function() {getMessage();}, 1000); //单聊设置时间
      };
-     //getMessage();
+     getMessage();
 	</script>
 		<style type="text/css">
 			div.jGrowl-notification {
