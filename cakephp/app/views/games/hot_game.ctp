@@ -3,15 +3,16 @@
 					<h3><a href="index.php?gid=59">热门游戏专区</a></h3>
 			</div>
 			<div class="bd">
-<table cellspacing="0" cellpadding="0" style="" summary="category59" id="category_59">
+          <table cellspacing="0" cellpadding="0" style="" summary="category59" id="category_59">
 							<thead class="category">
-					<tr>
-						<th>版块</th>
-						<td class="nums">主题</td>
-						<td class="nums">帖数</td>
-						<td class="lastpost">最后发表</td>
-					</tr>
-				</thead><tbody id="forum510">
+					        <tr>
+						        <th>版块</th>
+						        <td class="nums">主题</td>
+						        <td class="nums">帖数</td>
+						        <td class="lastpost">最后发表</td>
+					        </tr>
+				      </thead>
+          <tbody id="forum510">
 						<tr>
 							<th class="new">
 							<a href="#"><img border="0" align="left" alt="" src="../img/games/hot_game/地下城与勇士.jpg" style="margin-right: 10px"></a>							<h2><a href='#'>地下城与勇士</a> <em>(今日: 0)</em></h2>

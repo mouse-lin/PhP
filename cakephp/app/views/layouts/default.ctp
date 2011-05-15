@@ -321,7 +321,7 @@
            }
          },
        });
-     single_message = setTimeout(function() {getMessage();}, 1000); //单聊设置时间
+     //window.setTimeout(function() {getMessage();}, 3000);
      };
      getMessage();
 	</script>
