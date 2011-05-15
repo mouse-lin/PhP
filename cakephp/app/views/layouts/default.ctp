@@ -12,47 +12,18 @@
     <link rel="stylesheet" type="text/css" href="../../css/jquery.jgrowl.css">
     <script type="text/javascript" src="../../js/jquery-1.3.2.js"></script>
     <script type="text/javascript" src="../../js/login.js"></script>
+    <script type="text/javascript" src="../../js/menu.js"></script>
     <script type="text/javascript" src="../../js/clock.js"></script>
     <script type="text/javascript" src="../../js/jquery.jgrowl.js"></script>
   </head>
 
   <body>
-  <! 导航 >
-    <script type="text/javascript">
-      $(function() {
-        $('#navigation a').stop().animate({
-          'marginLeft': '-85px'
-        },
-        1000);
-
-        $('#navigation > li').hover(function() {
-          $('a', $(this)).stop().animate({
-            'marginLeft': '-2px'
-          },
-          200);
-        },
-        function() {
-          $('a', $(this)).stop().animate({
-            'marginLeft': '-85px'
-          },
-          200);
-        });
-      });
-
-      function loginHandler() { 
-          UserVoice.PopIn.show('600px', '300px', "/users/login");
-      };
-
-      function signupHandler() { 
-          UserVoice.PopIn.show('600px', '400px', "/users/signup");
-      }
-    </script>
     <ul id="navigation">
       <li class="home"><a href="../homes" title="主页"></a></li>
       <li class="hot_games"><a href="../games/hot_game" title="热门游戏"></a></li>
       <li class="expert_games"><a href="../games/expert_game" title="期待游戏"></a></li>
       <li class="other_games"><a href="../games/other_game" title="其他游戏"></a></li>
-      <li class="contact"><a href="" title="联系我们"></a></li>
+      <li class="contact"><a href="../contacts/detail" title="开发成员"></a></li>
       <?php
         if($user):
       ?>
@@ -118,12 +89,9 @@
         </div>
       </div>
 
-<?php
-  if($user):
-?>
-
   <!Mouse >
   <! 用来显示用户信息以及聊天窗口 >
+<?php if($user): ?>
 		<script type="text/javascript">
 	  	(function($){
 	  		$(document).ready(function(){
@@ -292,21 +260,9 @@
       $('#new_content').html("");
     }
 
-	</script>
-		<style type="text/css">
-			div.jGrowl-notification {
-        height:       190px;
-			}
-		</style>
-<?php
-  endif;
-?>
-<! 用户聊天窗口结束>
-
-  <!Mouse>
-  <!用来定时获取后台数据，查看是否有信息>
-  <script type="text/javascript">
-     function getMessage(){ 
+  //Mouse
+  //用来定时获取后台数据，查看是否有信息
+    function getMessage(){ 
        $.ajax({ 
          type: 'get',
          cache: false,
@@ -335,10 +291,18 @@
      window.setTimeout(function() {getMessage();}, 3000);
      };
      getMessage();
-  </script>
+
+
+	</script>
+		<style type="text/css">
+			div.jGrowl-notification {
+        height:       190px;
+			}
+		</style>
+<?php endif; ?>
+<! 用户聊天窗口结束>
 
     <div id="two" class="jGrowl top-right"></div>
-
       <div id="content">
         <div class="inner">
           <div class="main-bd clearfix">
@@ -351,30 +315,19 @@
     </div>
     <div id="footer">
       <div id="b" class="clearfix">
-        <div class="bl">
-        </div>
-        <div class="bc">
-        </div>
-        <div class="br">
-        </div>
+        <div class="bl"></div>
+        <div class="bc"></div>
+        <div class="br"></div>
       </div>
       <div class="bd">
         <div id="footlinks">
-          <p>
-            <span class="scrolltop" onclick="window.scrollTo(0,0);">
-              TOP
-            </span>
-          </p>
+          <p><span class="scrolltop" onclick="window.scrollTo(0,0);">TOP</span></p>
         </div>
         <p id="copyright">
           Copyright © 2011-2012
-          <em>
-            HzuPlay.com
-          </em>
+          <em>HzuPlay.com</em>
           [
-          <a href="#" target="_blank">
-            HzuPlay电子竞技交流平台
-          </a>
+          <a href="#" target="_blank"> HzuPlay电子竞技交流平台 </a>
           ]
         </p>
     </div>
