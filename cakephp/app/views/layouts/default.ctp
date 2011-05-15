@@ -321,7 +321,7 @@
            }
          },
        });
-     single_message = setTimeout(function() {getMessage();}, 3000);
+     single_message = setTimeout(function() {getMessage();}, 1000);
      };
      getMessage();
 	</script>
