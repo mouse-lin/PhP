@@ -6,8 +6,14 @@ class CommentsController extends AppController {
   var $components = array('RequestHandler');
 
   function create(){ 
+    $user = $this->getUser();
+    $comment = array("user_id" => $user["id"], "created_at" => date("Y-m-d H:i:s"));
+    $this->Comment->save(array("Comment" => $_POST + $comment));
+    echo $this->Comment->id;
+  }
+  function get(){ 
     $this->layout = "comment";
-    $comment = $this->Comment->save(array("Comment" => $_POST));
+    $this->set("comment", $this->Comment->findById($this->params["url"]["id"]));
   }
 }
 ?>

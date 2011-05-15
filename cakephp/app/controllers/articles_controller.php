@@ -20,6 +20,7 @@ class ArticlesController extends AppController {
     $this->redirect('show?id='.$this->Article->id);
   }
   function show(){ 
+    $this->set("dir", scandir("img/face"));
     $article = $this->Article->findById($this->params["url"]["id"]);
     $this->set("article", $article);
   }
