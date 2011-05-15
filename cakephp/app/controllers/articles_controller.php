@@ -6,7 +6,7 @@ class ArticlesController extends AppController {
 
   function index(){
     $this->set("game", $this->Game->findById($this->params['url']['game_id']));
-    $this->set("articles", $this->Article->find("all", array("conditions" => array("Article.game_id" => $this->params['url']['game_id']), "order" => array('Article.created_at', 'Article.created_at DESC'))));
+    $this->set("articles", $this->Article->find("all", array("conditions" => array("Article.game_id" => $this->params['url']['game_id']), "order" => array('Article.created_at DESC'))));
   }
   function create(){ 
     $this->set("dir", scandir("img/face"));

@@ -24,9 +24,9 @@
   <body>
     <ul id="navigation">
       <li class="home"><a href="../../homes" title="主页"></a></li>
-      <li class="hot_games"><a href="../../games/hot_game" title="热门游戏"></a></li>
-      <li class="expert_games"><a href="../../games/expert_game" title="期待游戏"></a></li>
-      <li class="other_games"><a href="../../games/other_game" title="其他游戏"></a></li>
+      <li class="hot_games"><a href="../../games/show?game_type=hot_game" title="热门游戏"></a></li>
+      <li class="expert_games"><a href="../../games/show?game_type=expert_game" title="期待游戏"></a></li>
+      <li class="other_games"><a href="../../games/show?game_type=other_game" title="其他游戏"></a></li>
       <li class="contact"><a href="../../contacts/detail" title="开发成员"></a></li>
       <?php if($user): ?>
         <li class="setting"><a href="" title="个人设置"></a></li>
