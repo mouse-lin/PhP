@@ -7,7 +7,7 @@
 <br />
 <div>
     <div style="display:inline;color:#743a3a;">时间:</div>
-    <div style="display:inline;"><?php echo $comment["Comment"]["created_at"]?></div>
+    <div style="display:inline;"><?php echo substr($comment["Comment"]["created_at"], 0, 10) ?></div>
 </div>
 </div>
 <div style="float:left;">
