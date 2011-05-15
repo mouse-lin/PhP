@@ -29,6 +29,4 @@ class AppController extends Controller
       $this->set('user',$this->getUser());
       $this->set('on_line_users', $this->getOnlineUser());
     }
-
 }   
-?>

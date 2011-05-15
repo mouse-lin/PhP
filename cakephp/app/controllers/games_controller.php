@@ -5,6 +5,7 @@ class GamesController extends AppController {
 
   //查看所有游戏
 	function index() {
+    $this->checkSession();
 		$this->Game->recursive = 0;
     #$this->set('pageTitle',"1");
 		$this->set('games', $this->paginate("Game"));
@@ -12,6 +13,7 @@ class GamesController extends AppController {
 
   //添加游戏
   function add() {
+    $this->checkSession();
 		if ($this->request->is('post')) {
 			$this->Game->create();
 			if ($this->Game->save($this->request->data)) {
@@ -23,6 +25,7 @@ class GamesController extends AppController {
 
   //游戏编辑
 	public function edit($id = null) {
+    $this->checkSession();
 		$this->Game->id = $id;
 		if (!$this->Game->exists()) {
 			throw new NotFoundException(__('错误的游戏'));
@@ -39,6 +42,7 @@ class GamesController extends AppController {
 
   //游戏删除
 	public function delete($id = null) {
+    $this->checkSession();
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
