@@ -27,18 +27,6 @@ cd $BACKUP_DIR
 mysqldump $OPTIONS > $DUMPFILE
 
 #判断数据库备份是否成功
-if  [$?==0] ; then
-#创建备份文件的压缩包
-#tar czvf $ARCHIVE $DUMPFILE >> $LOGFILE 2>&1
-#输入备份成功的消息到日记文件
-#echo "[$ARCHIVE] Backup Successful!" >> $LOGFILE
-#删除原始备份文件，只需保 留数据库备份文件的压缩包即可
-#rm -f $DUMPFILE
-  echo "数据库备份成功!" >> $LOGFILE
-else
-  echo "数据库备份失败!" >> $LOGFILE
-#备份失败后向网站管理者发送邮件提醒，需要mailutils或者类似终端下发送邮件工具的支持
-#mail -s “Database:$DATABASE Daily Backup Fail” $WEBMASTER
-fi
+
 #输出备份过程结束的提醒消息
 echo "======== 数据库备份完成 ========" >> $LOGFILE
