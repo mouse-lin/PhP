@@ -2,6 +2,8 @@
 class User extends AppModel {
   var $name = "User";
 
+  var $hasMany = "Article";
+
   #用户注册数据校验
 	var $validate = array(
 		'password' => array( 

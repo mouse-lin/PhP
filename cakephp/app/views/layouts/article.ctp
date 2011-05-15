@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
-    <body>
+    <body style='background-image:url(../img/p.jpg);margin:10%;'>
         <?php echo $content_for_layout?>
     </body>
 </html>

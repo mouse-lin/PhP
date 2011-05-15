@@ -1,8 +1,11 @@
+<div class="hd">
+    <h3 style="padding-left:27px;padding-bottom:5px;"><?php echo $gameType ?>专区</h3>
+</div>
+</div>
 <table style="width:90%;">
     <tr>
-        <td>游戏</td>
-        <th>主题</th>
-        <th>帖数</th>
+        <td style="padding-left:152px;">游戏</td>
+        <th style="text-align:center;">主题</th>
     </tr>
   <?php foreach ($games as $game): ?>
     <tr>
@@ -13,8 +16,8 @@
             <h2 style="display:inline;"><a href="../articles/index?game_id=<?php echo $game["Game"]["id"] ?>"><?php echo $game["Game"]["name"] ?></a></h2>
             <p><?php echo $game["Game"]["introduce"] ?> | <a href="../articles/index?game_id=<?php echo $game["Game"]["id"] ?>" style="color:blue;">进入专区</a></p>
         </th>
-        <td>
-            <a ><?php echo $game["Game"]["name"] ?></a>
+        <td style="text-align:center;">
+            <?php echo count($game["Article"]) ?>
         </td>
     </tr>
   <?php endforeach; ?>

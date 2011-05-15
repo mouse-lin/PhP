@@ -30,7 +30,7 @@ $(document).ready(function(){
     var frames = [];
     <?php foreach($article["Comment"] as $comment): ?>
         var temp = ($('<iframe style="width:100%; height:300px;">'));
-        $("#center").append(temp);
+        $("#center").append($("<br>")).append($("<br>")).append(temp);
         frames.push(temp);
     <?php endforeach; ?>
 
@@ -43,9 +43,8 @@ $(document).ready(function(){
     }, 1000);
 })
 </script>
-<div id="center" style="margin-left:20%;margin-right:20%;border:solid;">
-    <h3 style="margin-left:43%"><?php echo $article["Article"]["title"] ?></h3>
-    <iframe frameborder="0" src="get?id=<?php echo $article["Article"]["id"] ?>" tabindex=0 style="min-height: 564px; width: 762px;">
+<div id="center" style="margin-left:15%;margin-right:15%;padding:2.2%;">
+    <iframe frameborder="0" src="get?id=<?php echo $article["Article"]["id"] ?>" tabindex=0 style="min-height: 1150px; width: 800px;">
     </iframe>
 </div>
 <br />

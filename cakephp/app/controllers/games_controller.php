@@ -1,7 +1,7 @@
 <?php
 class GamesController extends AppController {
 	public $name = 'Games';
-  var $uses = array('Game');
+  var $uses = array('Game', 'Article');
 
   //查看所有游戏
 	function index() {
@@ -59,6 +59,7 @@ class GamesController extends AppController {
 
   function show(){ 
     $type = array("Game.game_type" => $this->params['url']['game_type']);
+    $this->set('gameType', $this->Game->gameTypeCn($this->params['url']['game_type']));
     $this->set('games', $this->Game->find("all", array("conditions" => $type)));
   }
 }
