@@ -29,7 +29,7 @@
       <li class="other_games"><a href="../../games/show?game_type=other_game" title="其他游戏"></a></li>
       <li class="contact"><a href="../../contacts/detail" title="开发成员"></a></li>
       <?php if($user): ?>
-        <li class="setting"><a href="" title="个人设置"></a></li>
+        <li class="setting"><a href="../../edit/basic" title="个人设置"></a></li>
         <?php if($user["name"] == "林洪狮" ): ?>
           <li class="admin"><a href="../../games" title="管理"></a></li>
         <?php endif ?>
