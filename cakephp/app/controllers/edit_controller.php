@@ -19,5 +19,5 @@ class EditController extends AppController {
 #mysql_select_db("php",$db);   //选择具体的数据库
 
 
-#$myinsert="replace into users (sex,birthday,address,email,qq,msn,phone) values ('$_POST[gender]')";  //构造插入语句
+#$myinsert="replace into users (sex,birthday,address,email,qq,msn,phone) values ('$_POST[reg]')";  //构造插入语句
 #$myresult=mysql_query($myinsert,$db);   //执行插入操作
